@@ -10,7 +10,9 @@ const inter = Roboto_Slab({
 function Body() {
   const { headPhones, heading, intro } = data
   return (
-    <section className={`mx-3 flex max-w-7xl space-x-3 leading-7 text-black`}>
+    <section
+      className={`mx-3 mb-5 flex max-w-7xl space-x-3 leading-7 text-black`}
+    >
       <article className="ml-3 text-lg md:ml-8 lg:ml-16">
         <h1
           className={`mb-3 text-2xl font-semibold uppercase leading-10 tracking-wide ${inter.className} `}

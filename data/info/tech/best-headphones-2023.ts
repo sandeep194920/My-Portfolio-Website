@@ -6,7 +6,7 @@ const data = {
   headPhones: [
     {
       name: `1MORE SonoFlow`,
-      heading: `1. 1MORE SonoFlow - Active Noise Cancelling Bluetooth Headphones with LDAC`,
+      heading: `1. 1MORE SonoFlow - Active Noise Cancelling Bluetooth Headphones with LDAC (100 USD)`,
       link: 'https://amzn.to/3GaltBc',
       ranking: 'Tier B',
       cardFeatures: [

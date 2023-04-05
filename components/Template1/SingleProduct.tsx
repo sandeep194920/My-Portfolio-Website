@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface Props {
   description: string[]
   heading: string
@@ -15,7 +13,7 @@ function SingleProduct(props: Props) {
   const { description, heading, link, name, features, pros, cons, summary } =
     props
   return (
-    <article className="">
+    <article>
       <h2 className="mb-3 text-xl font-semibold text-blue-900">
         <a target="_blank" href={link}>
           {heading}
@@ -56,8 +54,14 @@ function SingleProduct(props: Props) {
         </ul>
       </div>
       {/* Summary */}
-      <div className="font-semibold">
+      <div className="mb-4 italic">
         <p>{summary}</p>
+      </div>
+      {/* Call to action button */}
+      <div className="inline-block rounded-full bg-dark-primary px-7 py-3 text-white">
+        <a href={link} target="_blank">
+          Buy {name}
+        </a>
       </div>
     </article>
   )

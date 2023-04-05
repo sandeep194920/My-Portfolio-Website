@@ -5,7 +5,6 @@ function Card() {
     <div className="max-w-sm overflow-hidden rounded shadow-lg">
       <div className="px-6 py-4">
         <div className="mb-2 text-xl font-bold">Headphone Model Name</div>
-        <Image />
         <p className="text-base text-gray-700">A brief description</p>
       </div>
       <div className="px-6 py-4">

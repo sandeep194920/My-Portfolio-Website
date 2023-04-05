@@ -1,6 +1,5 @@
-import Body from '@/components/Body'
-import Header from '@/components/Header'
-import React from 'react'
+import Body from '@/components/Template1/Body'
+import Header from '@/components/Template1/Header'
 
 function BestHeadPhones() {
   return (
