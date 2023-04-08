@@ -1,5 +1,3 @@
-import { Fragment } from 'react'
-
 interface Props {
   description: string[]
   heading: string
@@ -68,7 +66,7 @@ function SingleProduct(props: Props) {
       </div>
       {/* Call to action button */}
       <a href={link} target="_blank">
-        <div className="my-5 inline-block rounded-md bg-dark-secondary px-6 py-2 font-semibold text-gray-700 hover:bg-dark-secondary-2">
+        <div className="my-5 inline-block rounded-md bg-dark-secondary px-4 py-1 font-semibold text-black hover:bg-dark-secondary-2">
           Checkout {name}
         </div>
       </a>
