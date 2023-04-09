@@ -11,13 +11,23 @@ interface Props {
   pros: string[]
   cons: string[]
   summary: string
+  separator?: boolean
 }
 
 function SingleProduct(props: Props) {
-  const { description, heading, link, name, features, pros, cons, summary } =
-    props
+  const {
+    description,
+    heading,
+    link,
+    name,
+    features,
+    pros,
+    cons,
+    summary,
+    separator,
+  } = props
   return (
-    <article className="mb-14">
+    <article className="mb-10">
       <h2 className="mb-2 text-2xl font-semibold">
         <a target="_blank" href={link}>
           {heading}
@@ -30,7 +40,9 @@ function SingleProduct(props: Props) {
       </div>
       {/* features */}
       <div className="my-5 space-y-2">
-        <h3 className="text-lg font-semibold ">Features of {name}</h3>
+        <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-400">
+          Features of {name}
+        </h3>
         <ul className="ml-3 space-y-2">
           {features.map((feature, index) => {
             return (
@@ -47,7 +59,9 @@ function SingleProduct(props: Props) {
       </div>
       {/* Pros */}
       <div className="my-5 space-y-2">
-        <h3 className="text-lg font-semibold ">Pros of {name}</h3>
+        <h3 className="text-lg font-semibold text-green-700 dark:text-green-300">
+          Pros of {name}
+        </h3>
         <ul className="ml-3  space-y-2">
           {pros.map((pro, index) => {
             return (
@@ -64,7 +78,9 @@ function SingleProduct(props: Props) {
       </div>
       {/* Cons */}
       <div className="my-5 space-y-2">
-        <h3 className="text-lg font-semibold ">Cons of {name}</h3>
+        <h3 className="text-lg font-semibold text-red-700 dark:text-red-300">
+          Cons of {name}
+        </h3>
         <ul className="ml-3 space-y-2">
           {cons.map((con, index) => {
             return (
@@ -89,6 +105,9 @@ function SingleProduct(props: Props) {
           Checkout {name}
         </div>
       </a>
+      {separator && (
+        <div className="border border-b-gray-500 dark:border-b-yellow-100"></div>
+      )}
     </article>
   )
 }

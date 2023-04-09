@@ -24,31 +24,34 @@ function Template1({ data }) {
         </div>
 
         {/* Products */}
-        {products.map((product, index) => {
-          const {
-            name,
-            heading,
-            link,
-            description,
-            pros,
-            cons,
-            features,
-            summary,
-          } = product
-          return (
-            <SingleProduct
-              key={index}
-              description={description}
-              heading={heading}
-              link={link}
-              name={name}
-              features={features}
-              pros={pros}
-              cons={cons}
-              summary={summary}
-            />
-          )
-        })}
+        <main>
+          {products.map((product, index) => {
+            const {
+              name,
+              heading,
+              link,
+              description,
+              pros,
+              cons,
+              features,
+              summary,
+            } = product
+            return (
+              <SingleProduct
+                key={index}
+                description={description}
+                heading={heading}
+                link={link}
+                name={name}
+                features={features}
+                pros={pros}
+                cons={cons}
+                summary={summary}
+                separator={index === products.length - 1 ? false : true}
+              />
+            )
+          })}
+        </main>
       </article>
     </section>
   )

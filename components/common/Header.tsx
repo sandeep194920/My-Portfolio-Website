@@ -17,7 +17,7 @@ function Header() {
     if (currentTheme === 'dark') {
       return (
         <BsSun
-          className="cursor-pointer text-2xl text-white"
+          className="cursor-pointer text-2xl text-dark-secondary"
           onClick={() => setTheme('light')}
         />
       )
