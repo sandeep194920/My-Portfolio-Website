@@ -14,32 +14,41 @@ function Card() {
         width={644}
         alt="Apple"
       />
-      <div className="ml-8">
-        <h4 className="text-lg font-semibold text-green-300">Positives</h4>
+
+      <div className="text-center">
+        <p className="bg-yellow-700 text-white">US $800</p>
+      </div>
+
+      <div className="ml-8 mt-2">
+        <h4 className="text-lg font-semibold text-green-700 dark:text-green-300">
+          Positives
+        </h4>
         <ul className="">
           <li className="flex items-center space-x-2">
-            <BsCheck className="text-base text-green-300" />
+            <BsCheck className="text-base text-green-700 dark:text-green-300" />
             <p>Sound Quality</p>
           </li>
 
           <li className="flex items-center space-x-2">
-            <BsCheck className="text-green-300" />
+            <BsCheck className="text-green-700 dark:text-green-300" />
             <p> USB Type-C Charging </p>
           </li>
           <li className="flex items-center space-x-2">
-            <BsCheck className="text-green-300" />
+            <BsCheck className="text-green-700 dark:text-green-300" />
             <p> Superb noice cancelling</p>
           </li>
           <li className="flex items-center space-x-2">
-            <BsCheck className="text-green-300" />
+            <BsCheck className="text-green-700 dark:text-green-300" />
 
             <p> Touch Controlls</p>
           </li>
         </ul>
-        <h4 className="text-lg font-semibold text-red-300">Negatives</h4>
+        <h4 className="text-lg font-semibold text-red-700 dark:text-red-300">
+          Negatives
+        </h4>
         <ul>
           <li className="flex items-center space-x-2">
-            <FiX className="text-base text-red-300" />
+            <FiX className="text-base text-red-700 dark:text-red-300" />
             <p> Price</p>
           </li>
         </ul>

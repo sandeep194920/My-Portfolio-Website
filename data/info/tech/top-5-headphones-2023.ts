@@ -20,13 +20,14 @@ const data = {
       ],
       price: '',
       features: [
-        "<strong>Comfortable Design:</strong> The ear cups are adjustable with super soft and plush cushions, and the headband's wide soft touch plastic lining stops it from sliding on hair.",
+        "<strong>Comfortable Design:</strong> The ear cups are adjustable with super soft and plush cushions, and the headband's wide soft touch plastic lining stops it from sliding on hair.<br>",
         '<strong>Bluetooth and Adaptive Audio:</strong> It supports Bluetooth 5.2 with universal SBC and AAC audio formats for Apple and others, and also supports the latest aptX adaptive format that offers higher audio quality and lower latency.',
         '<strong>Excellent Sound Quality:</strong> The headphones have a pleasing balance between powerful deep bass, warm mids, and sparkling highs without any one element overriding the others.',
         '<strong>Adaptable for All Music Genres:</strong> The headphones do an excellent job with all music genres and handle action-filled movie soundtracks with suitable bombast and immersion.',
         '<strong>Control App:</strong> The app has an equalizer-based boost, podcast mode, and a system that helps tailor the sound of the headphones to your liking.',
         '<strong>Effective Noise Cancelling:</strong> The headphones have effective noise cancelling that reduces rumbles, fan noise, and higher pitched tones such as voices or keyboard taps in an office.',
       ],
+
       pros: [
         'Superior comfort',
         'Excellent audio quality',

@@ -1,3 +1,7 @@
+import { Fragment } from 'react'
+// import { BiRightArrow } from 'react-icons/hi2'
+import { BiRightArrow } from 'react-icons/bi'
+
 interface Props {
   description: string[]
   heading: string
@@ -27,13 +31,16 @@ function SingleProduct(props: Props) {
       {/* features */}
       <div className="my-5 space-y-2">
         <h3 className="text-lg font-semibold ">Features of {name}</h3>
-        <ul className="ml-3 list-disc space-y-2">
+        <ul className="ml-3 space-y-2">
           {features.map((feature, index) => {
             return (
-              <li
-                dangerouslySetInnerHTML={{ __html: feature }}
-                key={index}
-              ></li>
+              <div key={index}>
+                <BiRightArrow className="mr-1 inline text-lg" />
+                <li
+                  className="inline"
+                  dangerouslySetInnerHTML={{ __html: feature }}
+                />
+              </div>
             )
           })}
         </ul>
@@ -41,10 +48,16 @@ function SingleProduct(props: Props) {
       {/* Pros */}
       <div className="my-5 space-y-2">
         <h3 className="text-lg font-semibold ">Pros of {name}</h3>
-        <ul className="ml-3 list-disc space-y-2">
+        <ul className="ml-3  space-y-2">
           {pros.map((pro, index) => {
             return (
-              <li dangerouslySetInnerHTML={{ __html: pro }} key={index}></li>
+              <div key={index}>
+                <BiRightArrow className="mr-1 inline text-lg" />
+                <li
+                  className="inline"
+                  dangerouslySetInnerHTML={{ __html: pro }}
+                />
+              </div>
             )
           })}
         </ul>
@@ -52,10 +65,16 @@ function SingleProduct(props: Props) {
       {/* Cons */}
       <div className="my-5 space-y-2">
         <h3 className="text-lg font-semibold ">Cons of {name}</h3>
-        <ul className="ml-3 list-disc space-y-2">
+        <ul className="ml-3 space-y-2">
           {cons.map((con, index) => {
             return (
-              <li dangerouslySetInnerHTML={{ __html: con }} key={index}></li>
+              <div key={index}>
+                <BiRightArrow className="mr-1 inline text-lg" />
+                <li
+                  className="inline"
+                  dangerouslySetInnerHTML={{ __html: con }}
+                />
+              </div>
             )
           })}
         </ul>
