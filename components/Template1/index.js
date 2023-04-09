@@ -1,6 +1,7 @@
 import React from 'react'
 import { Roboto_Slab } from 'next/font/google'
 import SingleProduct from './SingleProduct'
+import Card from './Card'
 // If loading a variable font, you don't need to specify the font weight
 const inter = Roboto_Slab({
   subsets: ['latin'],
@@ -18,7 +19,9 @@ function Template1({ data }) {
 
         <p dangerouslySetInnerHTML={{ __html: intro }}></p>
         {/* CARDS */}
-        <div className="mt-4"></div>
+        <div className="mt-4">
+          <Card />
+        </div>
 
         {/* Products */}
         {products.map((product, index) => {

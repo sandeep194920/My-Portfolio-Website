@@ -66,7 +66,7 @@ function SingleProduct(props: Props) {
       </div>
       {/* Call to action button */}
       <a href={link} target="_blank">
-        <div className="my-5 inline-block rounded-md bg-dark-secondary px-4 py-1 font-semibold text-black hover:bg-dark-secondary-2">
+        <div className="hover:bg-dark-secondary-2 my-5 inline-block rounded-md bg-blue-800 px-4 py-1 text-white">
           Checkout {name}
         </div>
       </a>
