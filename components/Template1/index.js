@@ -11,7 +11,7 @@ function Template1({ data }) {
   const { products, heading, intro } = data
   return (
     <section className={'mx-6 text-base  md:mx-8'}>
-      <article className="mx-0 leading-10 md:mx-24 md:max-w-6xl">
+      <article className="mx-0 leading-10 md:mx-24 md:max-w-7xl">
         <h1
           dangerouslySetInnerHTML={{ __html: heading }}
           className={`mb-3 text-3xl font-semibold uppercase leading-10 tracking-wide ${inter.className} `}
@@ -19,10 +19,17 @@ function Template1({ data }) {
 
         <p dangerouslySetInnerHTML={{ __html: intro }}></p>
         {/* CARDS */}
-        <div className="mt-4">
-          <Card />
+        <div className="flex max-w-full flex-wrap items-center justify-center lg:justify-between">
+          <div className="mt-4">
+            <Card />
+          </div>
+          <div className="mt-4">
+            <Card />
+          </div>
+          <div className="mt-4">
+            <Card />
+          </div>
         </div>
-
         {/* Products */}
         <main>
           {products.map((product, index) => {

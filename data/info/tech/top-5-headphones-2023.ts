@@ -14,11 +14,20 @@ const data = {
         img2: 'public/tech/headphones/sennheiserMomentum4/2.png',
       },
       range: '',
-      cardFeatures: [],
+      cardFeatures: {
+        price: '800',
+        pros: [
+          'Very Comfortable',
+          'Best Audio Quality',
+          'Long Battery Life',
+          'Effective Noise Cancelling',
+          'Very Adaptable',
+        ],
+        cons: ['Expensive'],
+      },
       description: [
         'Sennheiser Momentum 4 is a wireless over-the-ear headphone with a sleek design, superior comfort, and excellent audio quality',
       ],
-      price: '',
       features: [
         "<strong>Comfortable Design:</strong> The ear cups are adjustable with super soft and plush cushions, and the headband's wide soft touch plastic lining stops it from sliding on hair.<br>",
         '<strong>Bluetooth and Adaptive Audio:</strong> It supports Bluetooth 5.2 with universal SBC and AAC audio formats for Apple and others, and also supports the latest aptX adaptive format that offers higher audio quality and lower latency.',
@@ -53,7 +62,23 @@ const data = {
         img3: 'public/tech/headphones/boseQ45/3.png',
       },
       range: 'Mid',
-      cardFeatures: [],
+
+      cardFeatures: {
+        price: '800',
+        pros: [
+          'Excellent noise cancellation',
+          'Comfortable for extended use',
+          'User-friendly controls and app',
+          'Clear and balanced sound',
+          'Good for making phone calls',
+        ],
+        cons: [
+          'Average transparency mode',
+          'Low battery with ANC on',
+          'Steep price',
+        ],
+      },
+
       description: [
         'Bose, the company that made the noise-cancelling headphones category, introduces its Bose QC45 headphones. The Q stands for Quiet and the C stands for Comfort, and they deliver on that promise with very good ANC.',
       ],
@@ -100,7 +125,21 @@ const data = {
         img2: 'public/tech/headphones/sonyWH-1000XM5/2.png',
       },
       range: '',
-      cardFeatures: [],
+
+      cardFeatures: {
+        price: '800',
+        pros: [
+          'Excellent noise cancellation',
+          'Up to 30 hours of battery life (40 hours with noise cancellation off)',
+          'Good microphone performance',
+          "Customizable experience with Sony's app",
+        ],
+        cons: [
+          'Average battery life',
+          "Ldac can't be used if you're connected to two devices via Bluetooth multi-point.",
+        ],
+      },
+
       description: [],
       price: '',
       features: [
@@ -136,11 +175,21 @@ const data = {
         img2: 'public/tech/headphones/soundcore/2.png',
       },
       range: '',
-      cardFeatures: [],
+      cardFeatures: {
+        price: '1200',
+        pros: [
+          'Great noise cancellation',
+          'Strong bass, great sound',
+          'Blocks out 98% noise',
+          'Comfortable ear cushioning',
+          'High-res wireless audio',
+          'Long battery life',
+        ],
+        cons: ['Plastic insert not classy', 'Poor noise cancellation'],
+      },
       description: [
         'The Soundcore by AnchorSpace Q45 headphones are the latest over-the-ear noise-canceling headphones from Soundcore. They are designed to block out a wider range of noise up to 98 percent and are SGS certified. With a great battery life and a comfortable fit, these headphones are a worthy alternative at a lower cost compared to the competition.',
       ],
-      price: '',
       features: [
         '<strong>Next-Generation Acoustic Architecture:</strong> The Q45 headphones are designed with a Next-Generation Acoustic Architecture that blocks out a wider range of noise up to 98 percent and is SGS certified.',
         '<strong>Foldable Design:</strong> The headphones arrive folded inside its carrying case alongside USB at USBC charging and 3.5 millimeters anilon audio cable.',
@@ -174,7 +223,23 @@ const data = {
         img2: 'public/tech/headphones/airpodsMax/2.png',
       },
       range: '',
-      cardFeatures: [],
+      cardFeatures: {
+        price: '1400',
+        pros: [
+          'Luxurious design and materials',
+          'Top-notch noise cancellation',
+          'Comfortable even weight distribution',
+          'Smooth volume/playback control',
+          'Auto-pause playback',
+          'High-quality sound',
+          'Long battery life',
+        ],
+        cons: [
+          'Little heavy',
+          'Price',
+          'No Bluetooth multi-point connectivity',
+        ],
+      },
       description: [
         'The Apple AirPods Max wireless over-ear headphones are a luxury set of headphones that feature noise-canceling, transparency mode, and a comfortable, stylish design.',
       ],
