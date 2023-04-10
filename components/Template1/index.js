@@ -20,15 +20,32 @@ function Template1({ data }) {
         <p dangerouslySetInnerHTML={{ __html: intro }}></p>
         {/* CARDS */}
         <div className="flex max-w-full flex-wrap items-center justify-center lg:justify-between">
-          <div className="mt-4">
+          {products.map((product) => {
+            console.log('The product is', product)
+            const {
+              number,
+              cardFeatures,
+              images: { img2 },
+              name,
+              bestOverall,
+            } = product
+            return (
+              <div key={number} className="mt-4">
+                <Card
+                  cardFeatures={cardFeatures}
+                  image={img2}
+                  name={name}
+                  bestOverall={bestOverall}
+                />
+              </div>
+            )
+          })}
+          {/* <div className="mt-4">
             <Card />
           </div>
           <div className="mt-4">
             <Card />
-          </div>
-          <div className="mt-4">
-            <Card />
-          </div>
+          </div> */}
         </div>
         {/* Products */}
         <main>

@@ -27,7 +27,7 @@ function SingleProduct(props: Props) {
     separator,
   } = props
   return (
-    <article className="mb-10">
+    <article className="mb-10 mt-6">
       <h2 className="mb-2 text-2xl font-semibold">
         <a target="_blank" href={link}>
           {heading}

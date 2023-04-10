@@ -4,6 +4,7 @@ const data = {
     "Welcome to my blog where we explore the latest and greatest in audio technology. In today's world, headphones have become an essential accessory for anyone who loves music or needs to tune out the world around them. With so many options on the market, it can be overwhelming to choose the right pair of headphones. That's why we've curated a list of the <strong>top 5 headphones in 2023</strong>, based on their features, sound quality, design, and overall value.",
   products: [
     {
+      bestOverall: false,
       number: 1,
       name: 'Sennheiser Momentum 4',
       heading: 'Sennheiser Momentum 4 Wireless Headphones',
@@ -130,14 +131,11 @@ const data = {
         price: '800',
         pros: [
           'Excellent noise cancellation',
-          'Up to 30 hours of battery life (40 hours with noise cancellation off)',
+          'Long battery life',
           'Good microphone performance',
           "Customizable experience with Sony's app",
         ],
-        cons: [
-          'Average battery life',
-          "Ldac can't be used if you're connected to two devices via Bluetooth multi-point.",
-        ],
+        cons: ['Average battery life', 'Bluetooth multi-point'],
       },
 
       description: [],
