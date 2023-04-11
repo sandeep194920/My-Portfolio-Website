@@ -11,9 +11,10 @@ const data = {
       link: '',
       ranking: '5',
       images: {
-        img1: 'public/tech/headphones/sennheiserMomentum4/1.png',
-        img2: 'public/tech/headphones/sennheiserMomentum4/2.png',
+        card: '/tech/headphones/sennheiserMomentum4/1.png',
+        all: ['/tech/headphones/sennheiserMomentum4/2.png'],
       },
+
       range: '',
       price: '800',
       cardFeatures: {
@@ -58,9 +59,12 @@ const data = {
       link: 'https://amzn.to/43hxYEY',
       ranking: '4',
       images: {
-        img1: 'public/tech/headphones/boseQ45/1.png',
-        img2: 'public/tech/headphones/boseQ45/2.png',
-        img3: 'public/tech/headphones/boseQ45/3.png',
+        card: '/tech/headphones/boseQ45/1.png',
+        img3: '/tech/headphones/boseQ45/3.png',
+        all: [
+          '/tech/headphones/boseQ45/2.png',
+          '/tech/headphones/boseQ45/3.png',
+        ],
       },
       range: 'Mid',
       price: '1200',
@@ -120,8 +124,8 @@ const data = {
       link: '',
       ranking: '3',
       images: {
-        img1: 'public/tech/headphones/sonyWH-1000XM5/1.png',
-        img2: 'public/tech/headphones/sonyWH-1000XM5/2.png',
+        card: '/tech/headphones/sonyWH-1000XM5/2.png',
+        all: ['/tech/headphones/sonyWH-1000XM5/1.png'],
       },
       range: '',
       price: '200',
@@ -166,8 +170,8 @@ const data = {
       link: '',
       ranking: '2',
       images: {
-        img1: 'public/tech/headphones/soundcore/1.png',
-        img2: 'public/tech/headphones/soundcore/2.png',
+        card: '/tech/headphones/soundcore/1.png',
+        all: ['/tech/headphones/soundcore/1.png'],
       },
       range: '',
       price: '1200',
@@ -214,8 +218,8 @@ const data = {
       link: '',
       ranking: '1',
       images: {
-        img1: 'public/tech/headphones/airpodsMax/1.png',
-        img2: 'public/tech/headphones/airpodsMax/2.png',
+        card: '/tech/headphones/airpodsMax/2.png',
+        all: ['/tech/headphones/airpodsMax/1.png'],
       },
       range: '',
       price: '1400',

@@ -26,10 +26,11 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
             <h3 className="text-lg">{name}</h3>
           </header>
           <Image
-            src={'/tech/headphones/airpodsMax/1.png'}
+            src={image}
             height={644}
             width={644}
             alt="Apple"
+            className="h-[34rem]"
           />
 
           <div className="text-center">
