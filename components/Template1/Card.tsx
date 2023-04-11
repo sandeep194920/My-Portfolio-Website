@@ -6,15 +6,15 @@ import { AiFillStar } from 'react-icons/ai'
 interface Props {
   name: string
   image: string
+  price: string
   cardFeatures: {
     pros: string[]
     cons: string[]
-    price: string
   }
   bestOverall?: boolean
 }
 
-function Card({ name, image, cardFeatures, bestOverall }: Props) {
+function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
   console.log('The card features', name, image, bestOverall)
   return (
     <div className="mt-7 min-w-max max-w-sm">
@@ -33,7 +33,7 @@ function Card({ name, image, cardFeatures, bestOverall }: Props) {
           />
 
           <div className="text-center">
-            <p className="bg-yellow-300 text-dark-primary-3">US $800</p>
+            <p className="bg-yellow-300 text-dark-primary-3">US ${price}</p>
           </div>
 
           <div className="ml-8 mt-2">

@@ -15,8 +15,8 @@ const data = {
         img2: 'public/tech/headphones/sennheiserMomentum4/2.png',
       },
       range: '',
+      price: '800',
       cardFeatures: {
-        price: '800',
         pros: [
           'Very Comfortable',
           'Best Audio Quality',
@@ -63,9 +63,8 @@ const data = {
         img3: 'public/tech/headphones/boseQ45/3.png',
       },
       range: 'Mid',
-
+      price: '1200',
       cardFeatures: {
-        price: '800',
         pros: [
           'Excellent noise cancellation',
           'Comfortable for extended use',
@@ -83,7 +82,6 @@ const data = {
       description: [
         'Bose, the company that made the noise-cancelling headphones category, introduces its Bose QC45 headphones. The Q stands for Quiet and the C stands for Comfort, and they deliver on that promise with very good ANC.',
       ],
-      price: '',
       features: [
         '<strong>Excellent noise cancelling:</strong> The Bose QC45 headphones are designed with very good active noise cancelling (ANC) technology that lives up to the promise of quietude. This feature helps to block out external noise and provide a more immersive audio experience.',
 
@@ -126,7 +124,7 @@ const data = {
         img2: 'public/tech/headphones/sonyWH-1000XM5/2.png',
       },
       range: '',
-
+      price: '200',
       cardFeatures: {
         price: '800',
         pros: [
@@ -139,7 +137,6 @@ const data = {
       },
 
       description: [],
-      price: '',
       features: [
         'Noiseless design with a stepless slider and seamless swivels.',
         '30mm carbon fiber composite drivers with high rigidity domes and soft edges.',
@@ -173,8 +170,8 @@ const data = {
         img2: 'public/tech/headphones/soundcore/2.png',
       },
       range: '',
+      price: '1200',
       cardFeatures: {
-        price: '1200',
         pros: [
           'Great noise cancellation',
           'Strong bass, great sound',
@@ -221,8 +218,8 @@ const data = {
         img2: 'public/tech/headphones/airpodsMax/2.png',
       },
       range: '',
+      price: '1400',
       cardFeatures: {
-        price: '1400',
         pros: [
           'Luxurious design and materials',
           'Top-notch noise cancellation',
@@ -241,7 +238,6 @@ const data = {
       description: [
         'The Apple AirPods Max wireless over-ear headphones are a luxury set of headphones that feature noise-canceling, transparency mode, and a comfortable, stylish design.',
       ],
-      price: '',
       features: [
         '<strong>Luxurious Design</strong>: The AirPods Max have a sleek, high-end design with a stainless steel headband and aluminum ear cups that feel sturdy and premium.',
 

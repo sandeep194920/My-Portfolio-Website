@@ -19,7 +19,7 @@ function Template1({ data }) {
 
         <p dangerouslySetInnerHTML={{ __html: intro }}></p>
         {/* CARDS */}
-        <div className="flex max-w-full flex-wrap items-center justify-center lg:justify-between">
+        <div className="grid-auto-rows-min grid max-h-full justify-center justify-items-center gap-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
           {products.map((product) => {
             console.log('The product is', product)
             const {
@@ -28,6 +28,7 @@ function Template1({ data }) {
               images: { img2 },
               name,
               bestOverall,
+              price,
             } = product
             return (
               <div key={number} className="mt-4">
@@ -36,16 +37,11 @@ function Template1({ data }) {
                   image={img2}
                   name={name}
                   bestOverall={bestOverall}
+                  price={price}
                 />
               </div>
             )
           })}
-          {/* <div className="mt-4">
-            <Card />
-          </div>
-          <div className="mt-4">
-            <Card />
-          </div> */}
         </div>
         {/* Products */}
         <main>
