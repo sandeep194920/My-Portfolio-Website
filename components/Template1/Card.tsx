@@ -21,10 +21,10 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
       {bestOverall && <BestOverall />}
 
       <div className="mb-6 flex max-w-sm flex-col overflow-hidden rounded-md shadow-xl dark:bg-gradient-to-br dark:from-dark-card dark:to-blue-800">
+        <header className="w-full bg-dark-primary-button p-1 text-center  text-white dark:bg-transparent dark:text-white">
+          <h3 className="text-lg">{name}</h3>
+        </header>
         <div className="max-h-[60rem] min-h-[60rem] overflow-auto">
-          <header className="w-full bg-dark-primary-button p-1 text-center  text-white dark:bg-transparent dark:text-white">
-            <h3 className="text-lg">{name}</h3>
-          </header>
           <Image
             src={image}
             height={644}

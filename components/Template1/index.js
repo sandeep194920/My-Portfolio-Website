@@ -10,8 +10,8 @@ const inter = Roboto_Slab({
 function Template1({ data }) {
   const { products, heading, intro } = data
   return (
-    <section className={'mx-6 text-base  md:mx-8'}>
-      <article className="mx-0  leading-10 md:mx-24 md:max-w-[72%]">
+    <main className={'mx-6 flex  text-base md:mx-9'}>
+      <article className="mx-0  leading-10 md:mx-10 md:max-w-[75%]">
         <h1
           dangerouslySetInnerHTML={{ __html: heading }}
           className={`mb-3 text-3xl font-semibold uppercase leading-10 tracking-wide ${inter.className} `}
@@ -19,7 +19,7 @@ function Template1({ data }) {
 
         <p dangerouslySetInnerHTML={{ __html: intro }}></p>
         {/* CARDS */}
-        <div className="grid-auto-rows-min grid max-h-full justify-center justify-items-center gap-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
+        <div className="grid-auto-rows-min grid max-h-full justify-center justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
           {products.map((product) => {
             console.log('The product is', product)
             const {
@@ -73,7 +73,28 @@ function Template1({ data }) {
           })}
         </main>
       </article>
-    </section>
+      <article className="h-fit border border-gray-500 p-5 text-yellow-700 shadow-lg dark:border-dark-secondary dark:text-dark-secondary">
+        <nav className="mx-auto">
+          <h2 className="mb-4 text-2xl font-bold text-dark-primary-button dark:text-white">
+            Table of Contents
+          </h2>
+          <ul className="space-y-2">
+            {products.map((product) => (
+              <li
+                key={product.name}
+                className={
+                  'font-semibold transition-colors duration-200 hover:text-gray-800 dark:hover:text-gray-200'
+                }
+              >
+                <a href={`#`}>
+                  {product.number} {product.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </article>
+    </main>
   )
 }
 

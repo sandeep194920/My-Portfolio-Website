@@ -163,7 +163,7 @@ const data = {
         'The Sony WH-1000XM5 headphones are an excellent choice for those looking for noise-canceling headphones with good microphone performance and long battery life. The headphones have notable improvements in design and performance, including the noiseless design, improved noise cancellation, and Bluetooth 5.2 with codec support. Despite the cons, such as no improvement in battery life and the inability to use ldac when connected to two devices, the Sony WH-1000XM5 headphones remain a top choice in the market.',
     },
     {
-      number: 2,
+      number: 4,
       name: 'Soundcore by Anker Space Q45',
       heading:
         'Soundcore by Anker Space Q45 Adaptive Active Noise Cancelling Headphones',
@@ -212,7 +212,7 @@ const data = {
       summary: `The Soundcore by AnchorSpace Q45 headphones are a great alternative to the competition, offering great active noise cancellation, sound quality with strong bass, high-resolution wireless audio and ldac support, and comfortable cushioning on the ear cups. With a battery life that is double that of the competition's model and a lower cost, these headphones are a great option for anyone looking for great quality headphones.`,
     },
     {
-      number: 1,
+      number: 5,
       name: 'Apple AirPods Max',
       heading: 'Apple AirPods Max Wireless Over-Ear Headphones',
       link: '',
