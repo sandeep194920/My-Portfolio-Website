@@ -73,7 +73,7 @@ function Template1({ data }) {
           })}
         </main>
       </article>
-      <article className="h-fit border border-gray-500 p-5 text-yellow-700 shadow-lg dark:border-dark-secondary dark:text-dark-secondary">
+      <article className="dark:border-dark-yellow dark:text-dark-yellow h-fit border border-gray-500 p-5 text-yellow-700 shadow-lg">
         <nav className="mx-auto">
           <h2 className="mb-4 text-2xl font-bold text-custom-blue dark:text-white">
             Table of Contents

@@ -17,7 +17,7 @@ function Header() {
     if (currentTheme === 'dark') {
       return (
         <BsSun
-          className="cursor-pointer text-2xl text-dark-secondary"
+          className="text-dark-yellow cursor-pointer text-2xl"
           onClick={() => setTheme('light')}
         />
       )
@@ -32,7 +32,7 @@ function Header() {
   }
 
   return (
-    <header className="mb-10 bg-gradient-to-r from-dark-primary to-blue-800 p-6">
+    <header className="mb-10 bg-gradient-to-r from-dark-blue to-blue-800 p-6">
       <div className="flex items-center justify-between md:mx-28">
         <div>
           <Image

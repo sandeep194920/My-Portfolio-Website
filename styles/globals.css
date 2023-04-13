@@ -4,8 +4,7 @@
 
 @layer base {
   body {
-    /* @apply bg-gray-50  dark:bg-dark-primary-2 dark:text-white; */
-    @apply bg-gradient-to-r from-slate-50 to-gray-50 dark:bg-gradient-to-r dark:from-dark-primary dark:to-blue-800 dark:text-white;
+    @apply bg-gradient-to-r from-slate-50 to-gray-50 dark:bg-gradient-to-r dark:from-dark-blue dark:to-blue-800 dark:text-white;
     @apply min-h-screen;
   }
 
@@ -14,4 +13,4 @@
   }
 }
 
-/* bg-gradient-to-r from-dark-primary to-blue-800 */
+/* bg-gradient-to-r from-dark-blue to-blue-800 */

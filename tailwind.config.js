@@ -12,12 +12,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-primary': '#0A1929',
-        'dark-primary-3': '#0E192C',
+        'dark-blue': '#0A1929',
         'custom-blue': '#0059B2',
-        'dark-secondary': '#E7B813',
+        'dark-yellow': '#E7B813',
         'dark-card': '#132F4C',
-        'light-card': '#FFFFFF',
       },
       fontSize: {
         sm: '0.8rem',

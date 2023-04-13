@@ -72,7 +72,7 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
           </div>
         </div>
         <a href="">
-          <div className="text:white mx-auto my-2 max-w-90 cursor-pointer rounded-md bg-orange-300 py-1 text-center dark:text-dark-primary">
+          <div className="text:white mx-auto my-2 max-w-90 cursor-pointer rounded-md bg-orange-300 py-1 text-center dark:text-dark-blue">
             View Product
           </div>
         </a>
