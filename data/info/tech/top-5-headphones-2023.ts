@@ -140,7 +140,9 @@ const data = {
         cons: ['Average battery life', 'Bluetooth multi-point'],
       },
 
-      description: [],
+      description: [
+        'WH-1000XM5 headphones rewrite the rules for distraction-free listening and exceptional call clarity. Two processors control multiple microphones for unprecedented noise cancelling while Auto NC Optimizer automatically optimizes noise cancelling based on your wearing conditions and environment. The specially designed 30 mm driver unit delivers superior sound quality for all your entertainment.',
+      ],
       features: [
         'Noiseless design with a stepless slider and seamless swivels.',
         '30mm carbon fiber composite drivers with high rigidity domes and soft edges.',

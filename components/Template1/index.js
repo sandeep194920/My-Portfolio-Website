@@ -1,7 +1,8 @@
 import React from 'react'
 import { Roboto_Slab } from 'next/font/google'
+import Card from '../common/Card'
 import SingleProduct from './SingleProduct'
-import Card from './Card'
+import TableOfContents from '../common/TableOfContents'
 // If loading a variable font, you don't need to specify the font weight
 const inter = Roboto_Slab({
   subsets: ['latin'],
@@ -11,7 +12,7 @@ function Template1({ data }) {
   const { products, heading, intro } = data
   return (
     <main className={'mx-6 flex  text-base md:mx-9'}>
-      <article className="mx-0  leading-10 md:mx-10 md:max-w-[75%]">
+      <article className="mx-0  leading-10 md:mx-10 lg:max-w-[75%]">
         <h1
           dangerouslySetInnerHTML={{ __html: heading }}
           className={`mb-3 text-3xl font-semibold uppercase leading-10 tracking-wide ${inter.className} `}
@@ -55,6 +56,7 @@ function Template1({ data }) {
               cons,
               features,
               summary,
+              images: { all },
             } = product
             return (
               <SingleProduct
@@ -68,32 +70,13 @@ function Template1({ data }) {
                 cons={cons}
                 summary={summary}
                 separator={index === products.length - 1 ? false : true}
+                images={all}
               />
             )
           })}
         </main>
       </article>
-      <article className="dark:border-dark-yellow dark:text-dark-yellow h-fit border border-gray-500 p-5 text-yellow-700 shadow-lg">
-        <nav className="mx-auto">
-          <h2 className="mb-4 text-2xl font-bold text-custom-blue dark:text-white">
-            Table of Contents
-          </h2>
-          <ul className="space-y-2">
-            {products.map((product) => (
-              <li
-                key={product.name}
-                className={
-                  'font-semibold transition-colors duration-200 hover:text-gray-800 dark:hover:text-gray-200'
-                }
-              >
-                <a href={`#`}>
-                  {product.number} {product.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </article>
+      <TableOfContents products={products} />
     </main>
   )
 }
