@@ -21,7 +21,7 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
       {bestOverall && <BestOverall />}
 
       <div className="mb-6 flex max-w-sm flex-col overflow-hidden rounded-md shadow-xl dark:bg-gradient-to-br dark:from-dark-card dark:to-blue-800">
-        <header className="w-full bg-dark-primary-button p-1 text-center  text-white dark:bg-transparent dark:text-white">
+        <header className="w-full bg-custom-blue p-1 text-center  text-white dark:bg-transparent dark:text-white">
           <h3 className="text-lg">{name}</h3>
         </header>
         <div className="max-h-[60rem] min-h-[60rem] overflow-auto">
@@ -34,7 +34,9 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
           />
 
           <div className="text-center">
-            <p className="bg-yellow-300 text-dark-primary-3">US ${price}</p>
+            <h5 className="font-semibold text-orange-700 shadow-2xl dark:text-orange-200">
+              US ${price}
+            </h5>
           </div>
 
           <div className="ml-8 mt-2">
@@ -70,7 +72,7 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
           </div>
         </div>
         <a href="">
-          <div className="mx-auto my-2 max-w-90 cursor-pointer rounded-md bg-dark-primary-3 py-1 text-center text-white">
+          <div className="text:white mx-auto my-2 max-w-90 cursor-pointer rounded-md bg-orange-300 py-1 text-center dark:text-dark-primary">
             View Product
           </div>
         </a>

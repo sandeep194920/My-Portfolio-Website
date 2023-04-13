@@ -75,7 +75,7 @@ function Template1({ data }) {
       </article>
       <article className="h-fit border border-gray-500 p-5 text-yellow-700 shadow-lg dark:border-dark-secondary dark:text-dark-secondary">
         <nav className="mx-auto">
-          <h2 className="mb-4 text-2xl font-bold text-dark-primary-button dark:text-white">
+          <h2 className="mb-4 text-2xl font-bold text-custom-blue dark:text-white">
             Table of Contents
           </h2>
           <ul className="space-y-2">

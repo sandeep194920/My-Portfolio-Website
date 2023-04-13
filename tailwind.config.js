@@ -13,10 +13,8 @@ module.exports = {
     extend: {
       colors: {
         'dark-primary': '#0A1929',
-        'dark-primary-1': '#1B3052',
-        'dark-primary-2': '#011E3C',
         'dark-primary-3': '#0E192C',
-        'dark-primary-button': '#0059B2',
+        'custom-blue': '#0059B2',
         'dark-secondary': '#E7B813',
         'dark-card': '#132F4C',
         'light-card': '#FFFFFF',
