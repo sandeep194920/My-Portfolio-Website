@@ -7,6 +7,7 @@ interface Props {
   description: string[]
   heading: string
   link: string
+  number: number
   name: string
   features?: string[]
   pros?: string[]
@@ -28,13 +29,14 @@ function SingleProduct(props: Props) {
     summary,
     separator,
     images,
+    number,
   } = props
   return (
     <article className="mb-10 mt-6">
       {/* heading */}
-      <h2 className="mb-2 text-2xl font-semibold">
+      <h2 id={name} className="mb-2 text-2xl font-semibold">
         <a target="_blank" href={link}>
-          {heading}
+          {number}. {heading}
         </a>
       </h2>
       {/* description */}

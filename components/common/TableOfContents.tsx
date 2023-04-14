@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-scroll'
+
 interface Props {
   products: [
     {
@@ -9,7 +11,7 @@ interface Props {
 }
 function TableOfContents({ products }: Props) {
   return (
-    <article className="hidden h-fit border border-gray-500 p-5 text-yellow-700 shadow-lg dark:border-dark-yellow dark:text-dark-yellow lg:block">
+    <article className="hidden h-fit border border-gray-500 p-5 font-light text-custom-blue shadow-sm dark:border-dark-yellow dark:text-dark-yellow lg:block">
       <nav className="mx-auto">
         <h2 className="mb-4 text-2xl font-bold text-custom-blue dark:text-white">
           Table of Contents
@@ -19,12 +21,19 @@ function TableOfContents({ products }: Props) {
             <li
               key={product.name}
               className={
-                'font-semibold transition-colors duration-200 hover:text-gray-800 dark:hover:text-gray-200'
+                'transition-colors duration-200 hover:text-gray-800 dark:hover:text-gray-200'
               }
             >
-              <a href={`#`}>
+              <Link
+                className="cursor-pointer"
+                offset={5}
+                duration={500}
+                spy
+                smooth
+                to={product.name}
+              >
                 {product.number} {product.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
