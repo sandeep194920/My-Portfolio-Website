@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
-import Template1 from '@/components/template1'
 import { data } from '@/data/info/tech/top-5-headphones-2023'
 import Header from '@/components/common/Header'
 import Head from 'next/head'
+import Template1 from '@/components/template1'
 
 function TopHeadphones() {
   return (
