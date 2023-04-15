@@ -49,7 +49,7 @@ function Template1({ data }: any) {
               number,
               features,
               summary,
-              images: { all },
+              images,
             } = product
             return (
               <SingleProduct
@@ -64,7 +64,7 @@ function Template1({ data }: any) {
                 cons={cons}
                 summary={summary}
                 separator={index === products.length - 1 ? false : true}
-                images={all}
+                images={images}
               />
             )
           })}

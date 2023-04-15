@@ -26,22 +26,22 @@ function Card({
 
       <div className="mb-6 flex max-w-sm flex-col overflow-hidden rounded-md shadow-xl dark:bg-gradient-to-br dark:from-dark-card dark:to-blue-800">
         <header className="w-full bg-custom-blue p-1 text-center  text-white dark:bg-transparent dark:text-white">
-          <h3 className="text-lg">{name}</h3>
+          <p className="text-lg">{name}</p>
         </header>
-        <div className="max-h-[60rem] min-h-[60rem] overflow-auto">
+        <div className="max-h-[50rem] min-h-[50rem] overflow-auto">
           <Image
             src={cardImg}
             height={644}
             width={644}
             alt="Apple"
-            className="h-[34rem]"
+            className="h-[24rem] object-cover"
           />
 
           <div className="my-2 ml-8">
             {/* PROS */}
-            <h4 className="text-lg font-semibold text-green-700 dark:text-green-300">
+            <p className="text-lg font-semibold text-green-700 dark:text-green-300">
               Positives
-            </h4>
+            </p>
             <ul>
               {cardPros.map((pro, index) => {
                 return (
@@ -53,9 +53,9 @@ function Card({
               })}
             </ul>
             {/* CONS */}
-            <h4 className="text-lg font-semibold text-red-700 dark:text-red-300">
+            <p className="text-lg font-semibold text-red-700 dark:text-red-300">
               Negatives
-            </h4>
+            </p>
 
             <ul>
               {cardCons.map((con, index) => {
@@ -69,8 +69,8 @@ function Card({
             </ul>
           </div>
         </div>
-        <a href={link}>
-          <div className="text:white mx-auto my-2 max-w-90 cursor-pointer rounded-md bg-dark-blue py-1 text-center  text-white">
+        <a href={link} rel="nofollow">
+          <div className="text:white mx-auto my-2 max-w-90 rounded-md bg-dark-blue py-1 text-center  text-white">
             View Product
           </div>
         </a>

@@ -33,9 +33,7 @@ function SingleProduct(props: Props) {
     <article className="mb-10 mt-6">
       {/* heading */}
       <h2 id={name} className="mb-2 text-2xl font-semibold">
-        <a target="_blank" href={link}>
-          {number}. {heading}
-        </a>
+        {number}. {heading}
       </h2>
       {/* description */}
       <div className="space-y-2">
@@ -68,13 +66,13 @@ function SingleProduct(props: Props) {
           <ul className="ml-3 space-y-2">
             {features.map((feature, index) => {
               return (
-                <div key={index}>
+                <li key={index}>
                   <BiRightArrow className="mr-1 inline text-lg" />
-                  <li
+                  <div
                     className="inline"
                     dangerouslySetInnerHTML={{ __html: feature }}
                   />
-                </div>
+                </li>
               )
             })}
           </ul>
@@ -90,13 +88,13 @@ function SingleProduct(props: Props) {
           <ul className="ml-3  space-y-2">
             {pros.map((pro, index) => {
               return (
-                <div key={index}>
+                <li key={index}>
                   <BiRightArrow className="mr-1 inline text-lg" />
-                  <li
+                  <div
                     className="inline"
                     dangerouslySetInnerHTML={{ __html: pro }}
                   />
-                </div>
+                </li>
               )
             })}
           </ul>
@@ -112,13 +110,13 @@ function SingleProduct(props: Props) {
           <ul className="ml-3 space-y-2">
             {cons.map((con, index) => {
               return (
-                <div key={index}>
+                <li key={index}>
                   <BiRightArrow className="mr-1 inline text-lg" />
-                  <li
+                  <div
                     className="inline"
                     dangerouslySetInnerHTML={{ __html: con }}
                   />
-                </div>
+                </li>
               )
             })}
           </ul>
@@ -129,7 +127,7 @@ function SingleProduct(props: Props) {
         <p dangerouslySetInnerHTML={{ __html: summary }}></p>
       </div>
       {/* Call to action button */}
-      <a href={link} target="_blank">
+      <a href={link} rel="nofollow">
         <div className="my-5 inline-block rounded-md bg-blue-800 px-4 py-1 text-white hover:bg-dark-yellow">
           Checkout {name}
         </div>

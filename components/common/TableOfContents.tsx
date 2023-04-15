@@ -25,6 +25,7 @@ function TableOfContents({ products }: Props) {
               }
             >
               <Link
+                href="#"
                 className="cursor-pointer"
                 offset={5}
                 duration={500}
