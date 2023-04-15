@@ -9,7 +9,7 @@ const data = {
       number: 1,
       name: 'Sennheiser Momentum 4',
       heading: 'Sennheiser Momentum 4 Wireless Headphones',
-      link: '',
+      link: 'https://amzn.to/41bcHLQ',
       ranking: '5',
       images: ['/tech/headphones/sennheiserMomentum4/2.png'],
       cardFeatures: {
@@ -52,7 +52,7 @@ const data = {
       number: 2,
       name: 'Bose QC 45',
       heading: 'Bose QC 45 Bluetooth Wireless Noise Cancelling Headphones',
-      link: 'https://amzn.to/43hxYEY',
+      link: 'https://amzn.to/40dhon9',
       ranking: '4',
       images: [
         '/tech/headphones/boseQ45/2.png',
@@ -112,7 +112,7 @@ const data = {
       name: 'Sony WH-1000XM5',
       heading:
         'Sony WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones',
-      link: '',
+      link: 'https://amzn.to/41c0jLC',
       ranking: '3',
       images: ['/tech/headphones/sonyWH-1000XM5/1.png'],
       cardFeatures: {
@@ -155,7 +155,7 @@ const data = {
       name: 'Soundcore by Anker Space Q45',
       heading:
         'Soundcore by Anker Space Q45 Adaptive Active Noise Cancelling Headphones',
-      link: '',
+      link: 'https://amzn.to/43zJTOE',
       ranking: '2',
       images: ['/tech/headphones/soundcore/1.png'],
       cardFeatures: {
@@ -199,7 +199,7 @@ const data = {
       number: 5,
       name: 'Apple AirPods Max',
       heading: 'Apple AirPods Max Wireless Over-Ear Headphones',
-      link: '',
+      link: 'https://amzn.to/3N3CYHV',
       ranking: '1',
       images: ['/tech/headphones/airpodsMax/1.png'],
       cardFeatures: {

@@ -28,10 +28,10 @@ function Template1({ data }: any) {
         {/* CARDS */}
         <div className="grid-auto-rows-min grid max-h-full justify-center justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
           {products.map((product: any) => {
-            const { number, cardFeatures, name, price } = product
+            const { number, cardFeatures, name, link } = product
             return (
               <div key={number} className="mt-4">
-                <Card cardFeatures={cardFeatures} name={name} price={price} />
+                <Card cardFeatures={cardFeatures} name={name} link={link} />
               </div>
             )
           })}

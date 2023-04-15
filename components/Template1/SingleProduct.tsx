@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import { Fragment } from 'react'
-// import { BiRightArrow } from 'react-icons/hi2'
 import { BiRightArrow } from 'react-icons/bi'
 
 interface Props {
@@ -60,8 +58,8 @@ function SingleProduct(props: Props) {
             )
           })}
       </div>
-      {/* features */}
 
+      {/* features */}
       {features && (
         <div className="my-5 space-y-2">
           <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-400">
