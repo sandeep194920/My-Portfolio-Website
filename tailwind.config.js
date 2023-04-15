@@ -18,7 +18,7 @@ module.exports = {
         'dark-card': '#132F4C',
       },
       fontSize: {
-        sm: '0.8rem',
+        sm: '0.87rem',
         base: '1.1rem',
         lg: '1.25rem',
         xl: '1.30rem',
