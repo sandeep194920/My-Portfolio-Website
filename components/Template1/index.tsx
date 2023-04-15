@@ -20,7 +20,7 @@ function Template1({ data }: any) {
           className={`mb-3 text-3xl font-semibold uppercase leading-10 tracking-wide ${inter.className} `}
         ></h1>
         {/* POST DETAILS */}
-        <PostDetails lastUpdated="March 3, 2022" />
+        <PostDetails lastUpdated="April 15, 2022" />
         <p dangerouslySetInnerHTML={{ __html: intro }}></p>
 
         {/* AFFILIATE DISCLOSURE */}

@@ -2,6 +2,7 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { BsSun, BsMoon } from 'react-icons/bs'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 function Header() {
   const { systemTheme, theme, setTheme } = useTheme()
@@ -17,7 +18,7 @@ function Header() {
     if (currentTheme === 'dark') {
       return (
         <BsSun
-          className="text-dark-yellow cursor-pointer text-2xl"
+          className="cursor-pointer text-2xl text-dark-yellow"
           onClick={() => setTheme('light')}
         />
       )
@@ -34,14 +35,14 @@ function Header() {
   return (
     <header className="mb-10 bg-gradient-to-r from-dark-blue to-blue-800 p-6">
       <div className="flex items-center justify-between md:mx-28">
-        <div>
+        <Link href="/">
           <Image
             src="/svg/logo-no-background.svg"
             alt="my-info-tech logo"
             width={100}
             height={75}
           />
-        </div>
+        </Link>
         {renderThemeChanger()}
       </div>
     </header>

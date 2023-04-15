@@ -1,4 +1,5 @@
 import Header from '@/components/common/Header'
+import PostDetails from '@/components/common/PostDetails'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Fragment } from 'react'
@@ -35,15 +36,16 @@ export default function Home() {
       </Head>
       <Header />
       <main className={'mx-6 text-base md:mx-[7%]'}>
-        <p>
+        <h1 className="text-md font-semibold">
           Welcome to my blog, where I share my thoughts and ideas on a variety
           of topics, including the best headphones, managing finances, and more.
           I hope you find the information here useful and informative.
-        </p>
-        <section className="mt-7">
+        </h1>
+        <PostDetails lastUpdated="April 15, 2022" />
+        <section className="mt-3">
           <Link
             href={'/info/tech/top-5-headphones-2023'}
-            className="text-dark-yellow underline underline-offset-4"
+            className="text-custom-blue underline underline-offset-4 transition-colors duration-100 hover:text-gray-500 dark:text-dark-yellow dark:hover:text-yellow-200"
           >
             1. 5 best wireless over ear headphones to buy in 2023
           </Link>
