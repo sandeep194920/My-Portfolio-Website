@@ -1,5 +1,6 @@
 const data = {
-  heading: 'The 5 Best Wireless Headphones to Buy in 2023',
+  heading: '5 Best Wireless Over Ear Headphones to Buy in 2023',
+  affiliate: 'amazon',
   intro:
     "Welcome to my blog where we explore the latest and greatest in audio technology. In today's world, headphones have become an essential accessory for anyone who loves music or needs to tune out the world around them. With so many options on the market, it can be overwhelming to choose the right pair of headphones. That's why we've curated a list of the <strong>top 5 headphones in 2023</strong>, based on their features, sound quality, design, and overall value.",
   products: [
@@ -10,22 +11,17 @@ const data = {
       heading: 'Sennheiser Momentum 4 Wireless Headphones',
       link: '',
       ranking: '5',
-      images: {
-        card: '/tech/headphones/sennheiserMomentum4/1.png',
-        all: ['/tech/headphones/sennheiserMomentum4/2.png'],
-      },
-
-      range: '',
-      price: '800',
+      images: ['/tech/headphones/sennheiserMomentum4/2.png'],
       cardFeatures: {
-        pros: [
+        cardImg: '/tech/headphones/sennheiserMomentum4/1.png',
+        cardPros: [
           'Very Comfortable',
           'Best Audio Quality',
           'Long Battery Life',
           'Effective Noise Cancelling',
           'Very Adaptable',
         ],
-        cons: ['Expensive'],
+        cardCons: ['Expensive'],
       },
       description: [
         'Sennheiser Momentum 4 is a wireless over-the-ear headphone with a sleek design, superior comfort, and excellent audio quality',
@@ -58,25 +54,20 @@ const data = {
       heading: 'Bose QC 45 Bluetooth Wireless Noise Cancelling Headphones',
       link: 'https://amzn.to/43hxYEY',
       ranking: '4',
-      images: {
-        card: '/tech/headphones/boseQ45/1.png',
-        img3: '/tech/headphones/boseQ45/3.png',
-        all: [
-          '/tech/headphones/boseQ45/2.png',
-          '/tech/headphones/boseQ45/3.png',
-        ],
-      },
-      range: 'Mid',
-      price: '1200',
+      images: [
+        '/tech/headphones/boseQ45/2.png',
+        '/tech/headphones/boseQ45/3.png',
+      ],
       cardFeatures: {
-        pros: [
+        cardImg: '/tech/headphones/boseQ45/1.png',
+        cardPros: [
           'Excellent noise cancellation',
           'Comfortable for extended use',
           'User-friendly controls and app',
           'Clear and balanced sound',
           'Good for making phone calls',
         ],
-        cons: [
+        cardCons: [
           'Average transparency mode',
           'Low battery with ANC on',
           'Steep price',
@@ -99,7 +90,7 @@ const data = {
 
         '<strong>Decent option for phone calls:</strong> Bose has long been known for its excellent microphones and the QC45 headphones are no exception. While they may not be the best option on the market for phone calls, they are still a decent choice for most users.',
 
-        '<strong>Price:</strong> The Bose QC45 headphones are priced at $250, which may be considered steep for some users. However, the price may fluctuate, offering the chance for a better deal.',
+        '<strong>Price:</strong> The Bose QC45 headphones are priced high, which may be considered steep for some users. However, the price may fluctuate, offering the chance for a better deal.',
       ],
       pros: [
         'Very good ANC that delivers on the promise of quietude',
@@ -123,21 +114,16 @@ const data = {
         'Sony WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones',
       link: '',
       ranking: '3',
-      images: {
-        card: '/tech/headphones/sonyWH-1000XM5/2.png',
-        all: ['/tech/headphones/sonyWH-1000XM5/1.png'],
-      },
-      range: '',
-      price: '200',
+      images: ['/tech/headphones/sonyWH-1000XM5/1.png'],
       cardFeatures: {
-        price: '800',
-        pros: [
+        cardImg: '/tech/headphones/sonyWH-1000XM5/2.png',
+        cardPros: [
           'Excellent noise cancellation',
           'Long battery life',
           'Good microphone performance',
           "Customizable experience with Sony's app",
         ],
-        cons: ['Average battery life', 'Bluetooth multi-point'],
+        cardCons: ['Average battery life', 'Bluetooth multi-point'],
       },
 
       description: [
@@ -171,14 +157,10 @@ const data = {
         'Soundcore by Anker Space Q45 Adaptive Active Noise Cancelling Headphones',
       link: '',
       ranking: '2',
-      images: {
-        card: '/tech/headphones/soundcore/1.png',
-        all: ['/tech/headphones/soundcore/1.png'],
-      },
-      range: '',
-      price: '1200',
+      images: ['/tech/headphones/soundcore/1.png'],
       cardFeatures: {
-        pros: [
+        cardImg: '/tech/headphones/soundcore/1.png',
+        cardPros: [
           'Great noise cancellation',
           'Strong bass, great sound',
           'Blocks out 98% noise',
@@ -186,7 +168,7 @@ const data = {
           'High-res wireless audio',
           'Long battery life',
         ],
-        cons: ['Plastic insert not classy', 'Poor noise cancellation'],
+        cardCons: ['Plastic insert not classy', 'Poor noise cancellation'],
       },
       description: [
         'The Soundcore by AnchorSpace Q45 headphones are the latest over-the-ear noise-canceling headphones from Soundcore. They are designed to block out a wider range of noise up to 98 percent and are SGS certified. With a great battery life and a comfortable fit, these headphones are a worthy alternative at a lower cost compared to the competition.',
@@ -219,14 +201,10 @@ const data = {
       heading: 'Apple AirPods Max Wireless Over-Ear Headphones',
       link: '',
       ranking: '1',
-      images: {
-        card: '/tech/headphones/airpodsMax/2.png',
-        all: ['/tech/headphones/airpodsMax/1.png'],
-      },
-      range: '',
-      price: '1400',
+      images: ['/tech/headphones/airpodsMax/1.png'],
       cardFeatures: {
-        pros: [
+        cardImg: '/tech/headphones/airpodsMax/2.png',
+        cardPros: [
           'Luxurious design and materials',
           'Top-notch noise cancellation',
           'Comfortable even weight distribution',
@@ -235,7 +213,7 @@ const data = {
           'High-quality sound',
           'Long battery life',
         ],
-        cons: [
+        cardCons: [
           'Little heavy',
           'Price',
           'No Bluetooth multi-point connectivity',

@@ -5,17 +5,22 @@ import { AiFillStar } from 'react-icons/ai'
 
 interface Props {
   name: string
-  image: string
   price: string
   cardFeatures: {
-    pros: string[]
-    cons: string[]
+    cardImg: string
+    cardPros: string[]
+    cardCons: string[]
   }
   bestOverall?: boolean
 }
 
-function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
-  console.log('The card features', name, image, bestOverall)
+function Card({
+  name,
+  cardFeatures: { cardImg, cardPros, cardCons },
+  bestOverall,
+  price,
+}: Props) {
+  console.log('The card features', name, bestOverall)
   return (
     <div className="mt-7 min-w-max max-w-sm">
       {bestOverall && <BestOverall />}
@@ -26,26 +31,20 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
         </header>
         <div className="max-h-[60rem] min-h-[60rem] overflow-auto">
           <Image
-            src={image}
+            src={cardImg}
             height={644}
             width={644}
             alt="Apple"
             className="h-[34rem]"
           />
 
-          <div className="text-center">
-            <h5 className="font-semibold text-orange-700 shadow-2xl dark:text-orange-200">
-              US ${price}
-            </h5>
-          </div>
-
-          <div className="ml-8 mt-2">
+          <div className="my-2 ml-8">
             {/* PROS */}
             <h4 className="text-lg font-semibold text-green-700 dark:text-green-300">
               Positives
             </h4>
             <ul>
-              {cardFeatures.pros.map((pro, index) => {
+              {cardPros.map((pro, index) => {
                 return (
                   <li key={index} className="flex items-center space-x-2">
                     <BsCheck className="text-green-700 dark:text-green-300" />
@@ -60,7 +59,7 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
             </h4>
 
             <ul>
-              {cardFeatures.cons.map((con, index) => {
+              {cardCons.map((con, index) => {
                 return (
                   <li key={index} className="flex items-center space-x-2">
                     <FiX className="text-base text-red-700 dark:text-red-300" />
@@ -72,7 +71,7 @@ function Card({ name, image, cardFeatures, bestOverall, price }: Props) {
           </div>
         </div>
         <a href="">
-          <div className="text:white mx-auto my-2 max-w-90 cursor-pointer rounded-md bg-orange-300 py-1 text-center dark:text-dark-blue">
+          <div className="text:white mx-auto my-2 max-w-90 cursor-pointer rounded-md bg-dark-blue py-1 text-center  text-white">
             View Product
           </div>
         </a>

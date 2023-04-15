@@ -4,13 +4,14 @@ import Card from '../common/Card'
 import SingleProduct from './SingleProduct'
 import TableOfContents from '../common/TableOfContents'
 import PostDetails from '../common/PostDetails'
+import AmazonDisclosure from '../common/MessageToReaders/AmazonDisclosure'
 // If loading a variable font, you don't need to specify the font weight
 const inter = Roboto_Slab({
   subsets: ['latin'],
 })
 
-function Template1({ data }) {
-  const { products, heading, intro } = data
+function Template1({ data }: any) {
+  const { products, heading, intro, affiliate } = data
   return (
     <main className={'mx-6 flex  text-base md:mx-9'}>
       <article className="mx-0  leading-10 md:mx-10 lg:max-w-[75%]">
@@ -18,37 +19,26 @@ function Template1({ data }) {
           dangerouslySetInnerHTML={{ __html: heading }}
           className={`mb-3 text-3xl font-semibold uppercase leading-10 tracking-wide ${inter.className} `}
         ></h1>
-        {/* Post Details */}
+        {/* POST DETAILS */}
         <PostDetails lastUpdated="March 3, 2022" />
         <p dangerouslySetInnerHTML={{ __html: intro }}></p>
+
+        {/* AFFILIATE DISCLOSURE */}
+        {affiliate && affiliate === 'amazon' && <AmazonDisclosure />}
         {/* CARDS */}
         <div className="grid-auto-rows-min grid max-h-full justify-center justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
-          {products.map((product) => {
-            console.log('The product is', product)
-            const {
-              number,
-              cardFeatures,
-              images: { card },
-              name,
-              bestOverall,
-              price,
-            } = product
+          {products.map((product: any) => {
+            const { number, cardFeatures, name, price } = product
             return (
               <div key={number} className="mt-4">
-                <Card
-                  cardFeatures={cardFeatures}
-                  image={card}
-                  name={name}
-                  bestOverall={bestOverall}
-                  price={price}
-                />
+                <Card cardFeatures={cardFeatures} name={name} price={price} />
               </div>
             )
           })}
         </div>
         {/* Products */}
         <main>
-          {products.map((product, index) => {
+          {products.map((product: any, index: any) => {
             const {
               name,
               heading,
