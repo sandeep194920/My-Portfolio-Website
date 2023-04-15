@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { data } from '@/data/info/tech/top-5-headphones-2023'
 import Header from '@/components/common/Header'
 import Head from 'next/head'
-import Template1 from '@/components/template1/Template1'
+// import Template1 from '@/components/template1/Template1'
 
 function TopHeadphones() {
   return (
@@ -38,7 +38,7 @@ function TopHeadphones() {
         />
       </Head>
       <Header />
-      <Template1 data={data} />
+      {/* <Template1 data={data} /> */}
     </Fragment>
   )
 }
