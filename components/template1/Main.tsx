@@ -14,13 +14,13 @@ interface Products {
   name: string
   heading: string
   link: string
-  description: [string]
-  pros: [string]
-  cons: [string]
+  description: string[]
+  pros: string[]
+  cons: string[]
   number: number
-  features: [string]
+  features: string[]
   summary: string
-  images: [string]
+  images: string[]
 }
 interface Props {
   data: {
