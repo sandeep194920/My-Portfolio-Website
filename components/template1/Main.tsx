@@ -10,7 +10,28 @@ const inter = Roboto_Slab({
   subsets: ['latin'],
 })
 
-function Template1({ data }: any) {
+interface Products {
+  name: string
+  heading: string
+  link: string
+  description: [string]
+  pros: [string]
+  cons: [string]
+  number: number
+  features: [string]
+  summary: string
+  images: [string]
+}
+interface Props {
+  data: {
+    products: Products[]
+    heading: string
+    intro: string
+    affiliate: string
+  }
+}
+
+function Template1({ data }: Props) {
   const { products, heading, intro, affiliate } = data
   return (
     <main className={'mx-6 flex  text-base md:mx-9'}>
@@ -38,7 +59,7 @@ function Template1({ data }: any) {
         </div>
         {/* Products */}
         <main>
-          {products.map((product: any, index: any) => {
+          {products.map((product, index) => {
             const {
               name,
               heading,

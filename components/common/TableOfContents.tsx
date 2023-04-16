@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 
-interface Props {
-  products: [
-    {
-      name: string
-      number: number
-    }
-  ]
+interface Product {
+  name: string
+  number: number
 }
+interface Props {
+  products: Product[]
+}
+
 function TableOfContents({ products }: Props) {
   return (
     <article className="hidden h-fit border border-gray-500 p-5 font-light text-custom-blue shadow-sm dark:border-dark-yellow dark:text-dark-yellow lg:block">
