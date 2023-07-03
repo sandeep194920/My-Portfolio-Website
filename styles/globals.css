@@ -1,14 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '@fontsource/poppins';
+@import '@fontsource/roboto';
 
 @layer base {
   body {
-    @apply bg-gradient-to-r from-slate-50 to-gray-50 dark:bg-gradient-to-r dark:from-dark-blue dark:to-blue-800 dark:text-white;
-    @apply min-h-screen;
+    @apply bg-black;
+    font-family: 'Poppins';
   }
-
+  h1 {
+    /* font-family: 'Roboto'; */
+  }
   ::selection {
     @apply bg-indigo-600 text-white;
   }
+}
+
+.bg-gradient-metal {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.75) 20%,
+    rgba(255, 255, 255, 0.2) 120%
+  );
+}
+
+/*.Circle not used, but there for reference. This is used in tailwind fashion in Circle.tsx */
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1), 0px 6px 6px rgba(0, 0, 0, 0.1),
+    0px 8px 10px rgba(0, 0, 0, 0.1), 0px 12px 18px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0);
 }
