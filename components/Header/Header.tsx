@@ -22,20 +22,51 @@ function Header() {
             <Link href="www.google.com">Contact me</Link>
           </div>
         </nav>
-        <article className="m-auto mt-[8rem] flex">
-          <div className="mx-auto">
-            <h1 className="w-10 text-6xl font-semibold leading-snug tracking-wider">
+        {/* after nav */}
+        <article className="ml-[15%] mt-[9rem] flex">
+          {/* left section */}
+          <div className="mx-auto flex-1">
+            <p className="mb-4 w-fit rounded-lg bg-grey_gradient px-2 py-1 text-sm">
+              A versatile full stack web and mobile developer
+            </p>
+
+            <h1 className="mb-4 w-10 text-7xl font-semibold leading-snug tracking-wider">
               Sandeep{' '}
               <span className="bg-gradient bg-clip-text text-transparent">
                 Amarnath
               </span>
             </h1>
+
+            <p className="mb-10 max-w-90 leading-8">
+              As an experienced Full Stack Developer,{' '}
+              <span className="bg-gradient bg-clip-text font-extrabold text-transparent">
+                I thrive on transforming ideas into fully functional
+                applications
+              </span>
+              . With a holistic approach and proficiency in frontend and backend
+              technologies, I create captivating user interfaces, architect
+              robust backend systems, and seamlessly integrate them to deliver
+              exceptional end-to-end solutions.
+            </p>
+
+            <button className="rounded-lg bg-gradient px-6 py-2 font-semibold text-black">
+              View Resume
+            </button>
           </div>
+
+          {/* right section */}
           <div className="relative ml-auto">
             <Circle size="sm" />
-            <Circle size="md" />
             <Circle size="lg" />
-
+            <Circle size="md" />
+            <div className="absolute start-[20rem] top-[-3rem]">
+              <Image
+                src="./assets/images/view_resume.svg"
+                width={180}
+                height={580}
+                alt="robot-hand"
+              />
+            </div>
             <Image
               src="./assets/images/robot_hand.svg"
               width={800}

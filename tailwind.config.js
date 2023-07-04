@@ -13,6 +13,8 @@ module.exports = {
     backgroundImage: {
       gradient:
         'radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%)',
+      grey_gradient: 'linear-gradient(125.17deg, #272727 0%, #11101D 150%)',
+      image: 'url(/assets/images/profile_pic.svg)',
     },
 
     extend: {
