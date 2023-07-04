@@ -9,11 +9,9 @@
     @apply bg-black;
     font-family: 'Poppins';
   }
-  h1 {
-    /* font-family: 'Roboto'; */
-  }
+
   ::selection {
-    @apply bg-indigo-600 text-white;
+    @apply bg-slate-200 text-black;
   }
 }
 
