@@ -23,6 +23,27 @@
   );
 }
 
+.header-bg {
+  background: radial-gradient(
+      circle at top left,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(255, 255, 255, 0.05) 80%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(255, 255, 255, 0.05) 80%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url('/assets/images/profile_pic.svg') no-repeat center center;
+
+  background-size: cover;
+  height: 100vh;
+}
+
 /* not used, but there for reference. This is used in tailwind fashion in Circle.tsx */
 .circle {
   width: 200px;

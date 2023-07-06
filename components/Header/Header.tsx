@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import BGGradient from '../UI_Enhancers/MetallicBGGradient'
 import Circle from '../UI_Enhancers/Circle'
+import { data } from '../../data'
 
 function Header() {
   return (
-    <section className="text-white">
-      <BGGradient>
+    <section className="text-white ">
+      <div className="header-bg">
         <nav className="m-auto flex max-w-70 items-center justify-between pt-4">
           <div className="flex items-center">
             <Image alt="logo" src="./assets/logo.svg" width={30} height={30} />
@@ -27,7 +27,7 @@ function Header() {
           {/* left section */}
           <div className="mx-auto flex-1">
             <p className="mb-4 w-fit rounded-lg bg-grey_gradient px-2 py-1 text-sm">
-              A versatile full stack web and mobile developer
+              {data?.info?.header_pre_text}{' '}
             </p>
             <div className="relative flex flex-row">
               <h1 className="mb-4 w-10 text-7xl font-semibold leading-snug tracking-wider">
@@ -39,21 +39,19 @@ function Header() {
             </div>
 
             <p className="mb-10 max-w-90 leading-8 text-gray-300">
-              As an experienced Full Stack Developer,{' '}
+              {data?.info?.header_sub_text[0]},{' '}
               <span className="bg-gradient bg-clip-text font-extrabold text-transparent">
-                I thrive on transforming ideas into fully functional
-                applications
+                {data?.info?.header_sub_text[1]}{' '}
               </span>
-              . With a holistic approach and proficiency in frontend and backend
-              technologies, I create captivating user interfaces, architect
-              robust backend systems, and seamlessly integrate them to deliver
-              exceptional end-to-end solutions.
+              {data?.info?.header_sub_text[2]}
             </p>
 
             <div className="flex flex-row space-x-10">
-              <button className="rounded-lg bg-gradient px-6 py-2 font-semibold text-black">
-                View Resume
-              </button>
+              <Link target="_blank" href={data?.links?.resume}>
+                <button className="rounded-lg bg-gradient px-6 py-2 font-semibold text-black">
+                  View Resume
+                </button>
+              </Link>
 
               <button className=" items-center justify-center rounded-lg border-2 border-primary-clr px-4 py-2">
                 <div>
@@ -70,7 +68,7 @@ function Header() {
             <Circle size="lg" />
             <Circle size="md" />
             <div className="absolute start-[20rem] top-[-3rem]">
-              <Link href="https://drive.google.com/file/d/1pcL1czFgXxifgwwQL-W-Eo6O-ojyE24S/view?usp=drive_link">
+              <Link href={data?.links?.resume}>
                 <Image
                   src="./assets/images/view_resume.svg"
                   width={180}
@@ -87,7 +85,7 @@ function Header() {
             />
           </div>
         </article>
-      </BGGradient>
+      </div>
     </section>
   )
 }
