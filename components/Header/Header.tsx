@@ -3,28 +3,33 @@ import Link from 'next/link'
 import React from 'react'
 import Circle from '../UI_Enhancers/Circle'
 import { data } from '../../data'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import robotHand from '../../public/assets/images/robot_hand.png'
 
 function Header() {
   return (
     <section className="header-bg text-white">
-      <nav className="m-auto flex max-w-70 items-center justify-between pt-4">
-        <div className="flex items-center">
+      <nav className="m-auto mt-5 flex max-w-[90%] items-center justify-between sm:max-w-[83%] md:max-w-[85%] lg:max-w-70">
+        <div className="flex items-center ">
           <Image alt="logo" src="./assets/logo.svg" width={30} height={30} />
           <p className="ml-1 text-sm font-extrabold tracking-wider">
             Sandeep<span className="text-primary-clr">Amarnath</span>
           </p>
         </div>
-        <div className="flex space-x-7 text-sm">
+        <div className="hidden space-x-[2rem] text-sm sm:flex md:space-x-10">
           <Link href="www.google.com">Resume</Link>
           <Link href="www.google.com">Skills</Link>
           <Link href="www.google.com">Projects</Link>
           <Link href="www.google.com">Contact me</Link>
         </div>
+        <div className="sm:hidden">
+          <GiHamburgerMenu size={22} />
+        </div>
       </nav>
       {/* after nav */}
-      <article className="ml-[15%] mt-[9rem] flex">
+      <article className="mt-[9rem] flex items-end pl-[4%] sm:pl-[9%] md:pl-[7%] lg:pl-[15%]">
         {/* left section */}
-        <div className="mx-auto flex-1">
+        <div className="mx-2 flex-1 md:mx-auto">
           <p className="mb-4 w-fit rounded-lg bg-grey_gradient px-2 py-1 text-sm">
             {data?.info?.header_pre_text}{' '}
           </p>
@@ -37,7 +42,7 @@ function Header() {
             </h1>
           </div>
 
-          <p className="mb-10 max-w-90 leading-8 text-gray-300">
+          <p className="mb-10 leading-8 text-gray-300 sm:max-w-[90%] md:max-w-[80%]">
             {data?.info?.header_sub_text[0]},{' '}
             <span className="bg-gradient bg-clip-text font-extrabold text-transparent">
               {data?.info?.header_sub_text[1]}{' '}
@@ -47,7 +52,6 @@ function Header() {
 
           <div className="flex flex-row space-x-10">
             <Link target="_blank" href={data?.links?.resume}>
-              {/* <button className="rounded-lg bg-gradient px-6 py-2 font-semibold text-black"> */}
               <button className="items-center justify-center rounded-lg border-0 border-primary-clr bg-gradient px-4 py-2 text-black">
                 View Resume
               </button>
@@ -62,11 +66,15 @@ function Header() {
         </div>
 
         {/* right section */}
-        <div className="relative ml-auto">
-          <Circle size="sm" />
-          <Circle size="lg" />
-          <Circle size="md" />
-          <div className="absolute start-[20rem] top-[-3rem]">
+        <div className="relative">
+          {/* circles - absolute */}
+          <div className="absolute">
+            <Circle size="sm" />
+            <Circle size="lg" />
+            <Circle size="md" />
+          </div>
+          {/* resume - absolute */}
+          <div className="absolute md:start-[8rem] md:top-[-4rem] lg:start-[10rem] lg:top-[-5rem] ">
             <Link href={data?.links?.resume}>
               <Image
                 src="./assets/images/view_resume.svg"
@@ -76,12 +84,16 @@ function Header() {
               />
             </Link>
           </div>
-          <Image
-            src="./assets/images/robot_hand.svg"
-            width={800}
-            height={800}
-            alt="robot-hand"
-          />
+          {/* robot hand */}
+          <div className="hidden sm:hidden md:block">
+            <Image
+              className="h-[30rem] w-[40rem] sm:max-w-sm lg:max-w-md xl:max-w-xl"
+              src={robotHand}
+              width={0}
+              height={0}
+              alt="robot-hand"
+            />
+          </div>
         </div>
       </article>
       {/* after main content in header */}
