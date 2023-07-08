@@ -9,8 +9,8 @@ import robotHand from '../../public/assets/images/robot_hand.png'
 function Header() {
   return (
     <section className="header-bg text-white">
-      <nav className="m-auto mt-5 flex max-w-[90%] items-center justify-between sm:max-w-[83%] md:max-w-[85%] lg:max-w-70">
-        <div className="flex items-center ">
+      <nav className="m-auto mt-9 flex max-w-[90%] items-center justify-between sm:max-w-[83%] md:max-w-[85%] lg:max-w-70">
+        <div className="flex items-center">
           <Image alt="logo" src="./assets/logo.svg" width={30} height={30} />
           <p className="ml-1 text-sm font-extrabold tracking-wider">
             Sandeep<span className="text-primary-clr">Amarnath</span>
@@ -27,9 +27,9 @@ function Header() {
         </div>
       </nav>
       {/* after nav */}
-      <article className="mt-[9rem] flex items-end pl-[4%] sm:pl-[9%] md:pl-[7%] lg:pl-[15%]">
+      <article className="mt-[10rem] flex items-end pl-[4%] sm:pl-[9%] md:pl-[7%] lg:pl-[15%]">
         {/* left section */}
-        <div className="mx-2 flex-1 md:mx-auto">
+        <div className="mx-2 flex-1 pb-[7rem] md:mx-auto">
           <p className="mb-4 w-fit rounded-lg bg-grey_gradient px-2 py-1 text-sm">
             {data?.info?.header_pre_text}{' '}
           </p>
