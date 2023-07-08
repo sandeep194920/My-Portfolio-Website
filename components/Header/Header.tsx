@@ -22,12 +22,12 @@ function Header() {
           <Link href="www.google.com">Projects</Link>
           <Link href="www.google.com">Contact me</Link>
         </div>
-        <div className="sm:hidden">
+        <div className="cursor-pointer sm:hidden">
           <GiHamburgerMenu size={22} />
         </div>
       </nav>
       {/* after nav */}
-      <article className="mt-[10rem] flex items-end pl-[4%] sm:pl-[9%] md:pl-[7%] lg:pl-[15%]">
+      <article className="mt-[7rem] flex items-end pl-[4%] sm:mt-[10rem] sm:pl-[9%] md:pl-[7%] lg:pl-[15%]">
         {/* left section */}
         <div className="mx-2 flex-1 pb-[7rem] md:mx-auto">
           <p className="mb-4 w-fit rounded-lg bg-grey_gradient px-2 py-1 text-sm">
@@ -97,7 +97,41 @@ function Header() {
         </div>
       </article>
       {/* after main content in header */}
-      <div className="flex"></div>
+      <div className="text-md m-auto mt-[3.2rem] flex max-w-[90%] flex-wrap items-center justify-between leading-7 tracking-wider sm:max-w-[83%] md:max-w-[85%] lg:max-w-70">
+        <div className="flex items-center">
+          <h2 className="text-2xl">4+ &nbsp;</h2>
+          <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF FRONT-END
+          </h3>
+        </div>
+
+        <div>|</div>
+
+        <div className="flex items-center">
+          <h2 className="text-2xl">4+ &nbsp;</h2>
+          <h3 className="max-w-[8rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF FULL-STACK
+          </h3>
+        </div>
+
+        <div>|</div>
+
+        <div className="flex items-center">
+          <h2 className="text-2xl">2+ &nbsp;</h2>
+          <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF BACK-END
+          </h3>
+        </div>
+
+        <div>|</div>
+
+        <div className="flex items-center">
+          <h2 className="text-2xl">4+ &nbsp;</h2>
+          <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF MOBILE
+          </h3>
+        </div>
+      </div>
     </section>
   )
 }
