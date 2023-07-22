@@ -41,7 +41,7 @@
     url('/assets/images/profile_pic.svg') no-repeat center center;
   filter: brightness(120%) contrast(100%);
   background-size: cover;
-  height: 100vh;
+  height: 110vh;
 }
 
 /* not used, but there for reference. This is used in tailwind fashion in Circle.tsx */

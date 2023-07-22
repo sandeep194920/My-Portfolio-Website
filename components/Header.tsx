@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import Circle from '../UI_Enhancers/Circle'
-import { data } from '../../data'
+import Circle from './UI_Enhancers/Circle'
+import { data } from '../data'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import robotHand from '../../public/assets/images/robot_hand.png'
+import robotHand from '../public/assets/images/robot_hand.png'
 
 function Header() {
   return (

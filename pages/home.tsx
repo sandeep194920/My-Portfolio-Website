@@ -1,5 +1,4 @@
-import Header from '@/components/Header/Header'
-import Image from 'next/image'
+import Header from '@/components/Header'
 import React from 'react'
 
 function HomePage() {
