@@ -97,45 +97,34 @@ function Header() {
         </div>
       </article>
       {/* after main content in header */}
-      <div className="text-md m-auto mt-[3.2rem] flex max-w-[90%] flex-wrap items-center justify-between gap-4 bg-orange-900 leading-7 tracking-widest sm:max-w-[83%] md:max-w-[85%] lg:max-w-70">
-        <div className="m-auto flex flex-auto items-center justify-center space-x-12 bg-green-700">
-          <div className="flex min-w-[12rem] items-center bg-orange-400">
-            <h2 className="text-2xl">4+ &nbsp;</h2>
-            <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
-              YEARS OF FULL-STACK
-            </h3>
-          </div>
-
-          <div>|</div>
-
-          <div className="flex min-w-[12rem] items-center bg-orange-400">
-            <h2 className="text-2xl">4+ &nbsp;</h2>
-            <h3 className="max-w-[8rem] bg-gradient bg-clip-text text-transparent">
-              YEARS OF FRONT-END
-            </h3>
-          </div>
+      <div className="text-md m-auto mt-[3.2rem] flex max-w-[90%] flex-wrap items-center justify-between gap-5 leading-7 tracking-widest sm:max-w-[83%] md:max-w-[85%] lg:max-w-70">
+        <div className="flex min-w-[12rem] items-center">
+          <h2 className="text-2xl">4+ &nbsp;</h2>
+          <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF FULL-STACK
+          </h3>
         </div>
-        {/* center divider */}
-        <div>|</div>
-        <div className="m-auto flex flex-auto items-center justify-center space-x-12 bg-red-400">
-          <div className="flex min-w-[12rem] items-center bg-orange-400">
-            <h2 className="text-2xl">2+ &nbsp;</h2>
-            <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
-              YEARS OF BACK-END
-            </h3>
-          </div>
 
-          <div>|</div>
-
-          <div className="flex min-w-[12rem] items-center bg-orange-400">
-            <h2 className="text-2xl">4+ &nbsp;</h2>
-            <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
-              YEARS OF MOBILE
-            </h3>
-          </div>
+        <div className="flex min-w-[12rem] items-center">
+          <h2 className="text-2xl">4+ &nbsp;</h2>
+          <h3 className="max-w-[8rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF FRONT-END
+          </h3>
         </div>
-        {/* end divider - hide it*/}
-        <div className="invisible">|</div>
+
+        <div className="flex min-w-[12rem] items-center">
+          <h2 className="text-2xl">4+ &nbsp;</h2>
+          <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF FULL-STACK
+          </h3>
+        </div>
+
+        <div className="flex min-w-[12rem] items-center">
+          <h2 className="text-2xl">4+ &nbsp;</h2>
+          <h3 className="max-w-[8rem] bg-gradient bg-clip-text text-transparent">
+            YEARS OF FRONT-END
+          </h3>
+        </div>
       </div>
     </section>
   )
