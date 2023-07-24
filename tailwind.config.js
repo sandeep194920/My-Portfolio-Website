@@ -15,7 +15,8 @@ module.exports = {
       image: 'url(/assets/images/profile_pic.svg)',
       body_background:
         'linear-gradient(111deg, rgba(65,67,74,1) 0%, rgba(0,4,15,1) 23%, rgba(1,8,28,1) 83%)',
-      card_background: 'bg-gradient-to-r from-gray-600 to-zinc-900',
+      card_background:
+        'linear-gradient(167deg, rgba(65,67,74,1) 0%, rgba(0,4,15,1) 100%, rgba(180,198,250,1) 100%)',
     },
 
     extend: {
