@@ -1,10 +1,12 @@
 import { Fragment } from 'react'
-import HomePage from './home'
+import Header from '@/components/Header'
+import Body from '@/components/Body'
 
 export default function Home() {
   return (
     <Fragment>
-      <HomePage />
+      <Header />
+      <Body />
     </Fragment>
   )
 }
