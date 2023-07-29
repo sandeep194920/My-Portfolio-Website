@@ -30,7 +30,10 @@ function Header() {
         {/* after nav */}
         <article className="mt-[7rem] flex items-end pl-[4%] sm:mt-[10rem] sm:pl-[9%] md:pl-[7%] lg:pl-[15%]">
           {/* left section */}
-          <div className="mx-2 flex-1 pb-[7rem] md:mx-auto">
+          <div
+            data-aos="fade-right"
+            className="mx-2 flex-1 pb-[7rem] md:mx-auto"
+          >
             <p className="mb-4 w-fit rounded-lg bg-grey_gradient px-2 py-1 text-sm">
               {data?.info?.header_pre_text}{' '}
             </p>
@@ -68,7 +71,7 @@ function Header() {
           </div>
 
           {/* right section */}
-          <div className="relative">
+          <div data-aos="fade-left" className="relative">
             {/* circles - absolute */}
             <div className="absolute">
               <Circle size="sm" />
@@ -99,7 +102,10 @@ function Header() {
           </div>
         </article>
         {/* after main content in header */}
-        <div className="text-md m-auto flex max-w-[90%] flex-wrap items-center justify-between gap-5 pb-10 leading-7 tracking-widest sm:mt-[2rem] sm:max-w-[83%] md:mt-[2rem] md:max-w-[85%] lg:mt-[2rem] lg:max-w-70">
+        <div
+          data-aos="fade-up"
+          className="text-md m-auto flex max-w-[90%] flex-wrap items-center justify-between gap-5 pb-10 leading-7 tracking-widest sm:mt-[2rem] sm:max-w-[83%] md:mt-[2rem] md:max-w-[85%] lg:mt-[2rem] lg:max-w-70"
+        >
           <div className="flex min-w-[12rem] items-center">
             <h2 className="text-2xl">4+ &nbsp;</h2>
             <h3 className="max-w-[7rem] bg-gradient bg-clip-text text-transparent">

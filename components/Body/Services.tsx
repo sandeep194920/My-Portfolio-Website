@@ -1,38 +1,47 @@
 import { data } from '@/data'
 import React from 'react'
 import { GiBulletBill } from 'react-icons/gi'
+import Wrapper from './Helpers/Wrapper'
+import Paragraph from './Helpers/Paragraph'
 
 function Services() {
   return (
-    <article className="m-auto w-[70%] pt-16">
-      <h2 className="mb-4 text-4xl font-extrabold tracking-wider">
-        Software Services I offer
-      </h2>
+    <Wrapper title="Software Services I offer">
+      <Paragraph>
+        As a passionate software engineer with years of experience, I take pride
+        in offering a range of top-notch software services to meet your business
+        needs. Whether you are a startup looking to build a cutting-edge
+        application or an established company seeking to optimize your
+        processes, I have got you covered.
+      </Paragraph>
 
       {/* services cards */}
-      <div className="mt-[4rem]">
-        <div className="m-auto flex flex-wrap gap-[3.75rem]">
-          {data.services.map(({ heading, services }, index) => {
-            return (
-              <div
-                key={index}
-                className="space-6 min-w-[22rem] max-w-[22rem] space-y-6 rounded-lg bg-card_background p-8"
-              >
-                <h3 className="text-center text-xl font-bold">{heading}</h3>
-                <ul className="space-y-3 pl-4">
-                  {services.map((link) => (
-                    <div className="flex space-x-4" key={link}>
-                      <GiBulletBill color="#5CE1E6" />
-                      <li>{link}</li>
-                    </div>
-                  ))}
-                </ul>
-              </div>
-            )
-          })}
+      <div>
+        <div className="gap-[3.5rem] m-auto flex flex-wrap">
+          {data.services_section.services.map(
+            ({ heading, services, animation }, index) => {
+              return (
+                <div
+                  data-aos={animation}
+                  key={index}
+                  className="space-6 min-w-[22rem] max-w-[22rem] space-y-6 rounded-lg bg-card_background p-8"
+                >
+                  <h3 className="text-start text-xl font-bold">{heading}</h3>
+                  <ul className="space-y-3 pl-4">
+                    {services.map((link) => (
+                      <div className="flex items-center space-x-4" key={link}>
+                        <GiBulletBill color="#5CE1E6" />
+                        <li>{link}</li>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+          )}
         </div>
       </div>
-    </article>
+    </Wrapper>
   )
 }
 
