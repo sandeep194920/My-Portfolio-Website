@@ -79,39 +79,65 @@ const data = {
     skills: [
       {
         heading: 'Frontend',
-        skills: ['HTML', 'CSS', 'Sass', 'Jquery', 'Tailwind'],
+        skills: [
+          { skill: 'HTML', percent: 95 },
+          { skill: 'CSS', percent: 95 },
+          { skill: 'Sass', percent: 90 },
+          { skill: 'JQuery', percent: 60 },
+          { skill: 'Tailwind', percent: 85 },
+        ],
         animation: 'fade-right',
       },
       {
         heading: 'Backend',
-        skills: ['Node', 'Express', 'MongoDB', 'SQL', 'Redis'],
-        animation: 'fade-up',
-      },
-      {
-        heading: 'Languages',
-        skills: ['Python', 'Javascript'],
-        animation: 'fade-left',
-      },
-      {
-        heading: 'Design',
-        skills: ['Figma', 'Sketch', 'Adobe XD'],
-        animation: 'fade-right',
-      },
-      {
-        heading: 'Libraries/Frameworks',
         skills: [
-          'React',
-          'React Native',
-          'Next JS',
-          'Bootstrap',
-          'Material UI',
+          { skill: 'Node', percent: 90 },
+          { skill: 'Express', percent: 90 },
+          { skill: 'MongoDB', percent: 85 },
+          { skill: 'SQL', percent: 60 },
+          { skill: 'Redis', percent: 90 },
         ],
         animation: 'fade-up',
       },
       {
-        heading: 'Testing',
-        skills: ['PyUnit', 'Cypress', 'React Testing Library', 'Test Cafe'],
+        heading: 'Libraries/Frameworks',
+        skills: [
+          { skill: 'React', percent: 95 },
+          { skill: 'React Native', percent: 80 },
+          { skill: 'Next JS', percent: 90 },
+          { skill: 'Bootstrap', percent: 70 },
+          { skill: 'Material UI', percent: 90 },
+        ],
+        animation: 'fade-up',
+      },
+      {
+        heading: 'Languages',
+        skills: [
+          { skill: 'Python', percent: 70 },
+          { skill: 'Javascript', percent: 95 },
+          { skill: 'Java', percent: 50 },
+        ],
         animation: 'fade-left',
+      },
+      {
+        heading: 'Testing',
+        skills: [
+          { skill: 'PyUnit', percent: 60 },
+          { skill: 'Cypress', percent: 95 },
+          { skill: 'RTL (React)', percent: 80 },
+          { skill: 'Test Cafe', percent: 50 },
+          { skill: 'Selenium', percent: 50 },
+        ],
+        animation: 'fade-left',
+      },
+      {
+        heading: 'Design',
+        skills: [
+          { skill: 'Figma', percent: 60 },
+          { skill: 'Sketch', percent: 50 },
+          { skill: 'Adobe XD', percent: 50 },
+        ],
+        animation: 'fade-right',
       },
     ],
   },

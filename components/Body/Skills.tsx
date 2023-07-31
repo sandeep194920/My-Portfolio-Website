@@ -162,11 +162,26 @@ function Skills() {
                   className="space-6 min-w-[22rem] max-w-[22rem] space-y-6 rounded-lg bg-card_background p-8"
                 >
                   <h3 className="text-start text-xl font-bold">{heading}</h3>
-                  <ul className="space-y-3 pl-4">
-                    {skills.map((link) => (
-                      <div className="flex items-center space-x-4" key={link}>
-                        <GiBulletBill color="#5CE1E6" />
-                        <li>{link}</li>
+                  <ul className="space-y-5 pl-4">
+                    {skills.map(({ skill, percent }) => (
+                      <div className="flex items-center" key={skill}>
+                        <div className="flex flex-1 items-center space-x-3">
+                          <GiBulletBill color="#5CE1E6" />
+                          <div className="flex">
+                            <li className="w-[7rem]">{skill}</li>
+                          </div>
+
+                          {/* percentage */}
+                          <div className="relative h-3 w-[7rem] overflow-hidden rounded-md bg-gray-200">
+                            <div
+                              className="absolute left-0 top-0 h-full bg-cyan-500 opacity-100"
+                              style={{ width: `${percent}%` }}
+                            ></div>
+                            <div className="absolute left-4 top-1/2 -translate-y-1/2 transform text-sm font-bold text-white opacity-100">
+                              {percent}%
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </ul>
