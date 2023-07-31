@@ -75,6 +75,45 @@ const data = {
   skills_section: {
     intro:
       'With a passion for technology and a drive for excellence, I possess a diverse set of skills and expertise to tackle a wide range of challenges. From front-end development, creating intuitive user interfaces, to back-end programming, and handling complex databases, I am committed to delivering high-quality solutions that exceed expectations.',
+
+    skills: [
+      {
+        heading: 'Frontend',
+        skills: ['HTML', 'CSS', 'Sass', 'Jquery', 'Tailwind'],
+        animation: 'fade-right',
+      },
+      {
+        heading: 'Backend',
+        skills: ['Node', 'Express', 'MongoDB', 'SQL', 'Redis'],
+        animation: 'fade-up',
+      },
+      {
+        heading: 'Languages',
+        skills: ['Python', 'Javascript'],
+        animation: 'fade-left',
+      },
+      {
+        heading: 'Design',
+        skills: ['Figma', 'Sketch', 'Adobe XD'],
+        animation: 'fade-right',
+      },
+      {
+        heading: 'Libraries/Frameworks',
+        skills: [
+          'React',
+          'React Native',
+          'Next JS',
+          'Bootstrap',
+          'Material UI',
+        ],
+        animation: 'fade-up',
+      },
+      {
+        heading: 'Testing',
+        skills: ['PyUnit', 'Cypress', 'React Testing Library', 'Test Cafe'],
+        animation: 'fade-left',
+      },
+    ],
   },
 }
 

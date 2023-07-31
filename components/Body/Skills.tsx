@@ -16,13 +16,14 @@ import react from '../../public/assets/images/skills/frontend/react.png'
 import tailwind from '../../public/assets/images/skills/frontend/tailwind.png'
 import typescript from '../../public/assets/images/skills/frontend/typescript.png'
 import Image from 'next/image'
+import { GiBulletBill } from 'react-icons/gi'
 
 function Skills() {
   return (
     <Wrapper title="My Skills">
       <div className="justify-center sm:flex-wrap xl:flex xl:space-x-6">
         <Paragraph>{data.skills_section.intro}</Paragraph>
-        {/* image */}
+        {/* rings image */}
         <div className="skill-graphic relative flex justify-center">
           <Image
             className="h-[35rem] w-[35rem] sm:max-w-sm lg:max-w-md xl:max-w-xl"
@@ -146,6 +147,33 @@ function Skills() {
               alt="react"
             />
           </div>
+        </div>
+      </div>
+      {/* skills details */}
+      <div className="mt-[5rem]">
+        <div className="m-auto flex flex-wrap gap-[3.5rem]">
+          {data.skills_section.skills.map(
+            ({ heading, skills, animation }, index) => {
+              // skill
+              return (
+                <div
+                  data-aos={animation}
+                  key={index}
+                  className="space-6 min-w-[22rem] max-w-[22rem] space-y-6 rounded-lg bg-card_background p-8"
+                >
+                  <h3 className="text-start text-xl font-bold">{heading}</h3>
+                  <ul className="space-y-3 pl-4">
+                    {skills.map((link) => (
+                      <div className="flex items-center space-x-4" key={link}>
+                        <GiBulletBill color="#5CE1E6" />
+                        <li>{link}</li>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+          )}
         </div>
       </div>
     </Wrapper>

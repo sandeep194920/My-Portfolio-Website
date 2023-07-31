@@ -15,9 +15,9 @@ function Services() {
         processes, I have got you covered.
       </Paragraph>
 
-      {/* services cards */}
+      {/* Skill cards */}
       <div>
-        <div className="gap-[3.5rem] m-auto flex flex-wrap">
+        <div className="m-auto flex flex-wrap gap-[3.5rem]">
           {data.services_section.services.map(
             ({ heading, services, animation }, index) => {
               return (
