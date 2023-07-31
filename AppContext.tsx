@@ -1,7 +1,8 @@
 import React, { createContext, ReactNode, useContext, useState } from 'react'
 
-interface Props {
+export interface Props {
   children: ReactNode
+  title?: string
 }
 
 const AppContext = createContext({ theme: 'light', changeTheme: () => {} })
