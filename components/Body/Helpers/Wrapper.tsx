@@ -4,7 +4,7 @@ import { Props } from '../../../AppContext'
 function Wrapper({ children, title }: Props) {
   console.log('Children', children)
   return (
-    <article className="m-auto w-[70%] pt-16 tracking-wide">
+    <article className="pt-[6rem] m-auto w-[70%] tracking-wide">
       <h2 className="mb-[3rem] text-4xl font-extrabold tracking-wider">
         {title}
       </h2>
