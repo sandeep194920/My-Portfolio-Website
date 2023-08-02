@@ -61,6 +61,11 @@
   transform: translateZ(0);
 }
 
+/* common circle style */
+.circle {
+  @apply absolute hidden rounded-[100%] bg-[radial-gradient(_64.18%_64.18%_at_71.16%_35.69%,#def9fa_0.89%,#bef3f5_17.23%,#9dedf0_42.04%,#7de7eb_55.12%,#5ce1e6_71.54%,#33bbcf_100%_)] shadow-[0px_4px_20px_rgba(0,0,0,0.1),0px_6px_6px_rgba(0,0,0,0.1),0px_8px_10px_rgba(0,0,0,0.1),0px_12px_18px_rgba(0,0,0,0.1)] lg:block;
+}
+
 /* skills ring */
 
 .skill {
