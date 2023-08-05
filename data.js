@@ -17,7 +17,7 @@ const data = {
     services: [
       {
         heading: 'UI/UX Design',
-        services: [
+        items: [
           'Intuitive Interfaces',
           'User-Centric Approach',
           'Engaging User Experience',
@@ -28,7 +28,7 @@ const data = {
       },
       {
         heading: 'Web App Development',
-        services: [
+        items: [
           'Custom Web Solutions',
           'Scalable Architecture',
           'Cutting-Edge Technologies',
@@ -39,7 +39,7 @@ const data = {
       },
       {
         heading: 'Mobile App Development',
-        services: [
+        items: [
           'Cross-Platform Expertise',
           'User-Friendly Apps',
           'High-Performance Solutions',
@@ -50,7 +50,7 @@ const data = {
       },
       {
         heading: 'SEO Optimization',
-        services: [
+        items: [
           'Keyword Research',
           'Organic Traffic Growth',
           'On-Page Optimization',
@@ -61,7 +61,7 @@ const data = {
       },
       {
         heading: 'Cloud Deployment',
-        services: [
+        items: [
           'Secure Cloud Solutions',
           'Scalable Infrastructure',
           'Reliable Data Storage',
@@ -79,7 +79,7 @@ const data = {
     skills: [
       {
         heading: 'Frontend',
-        skills: [
+        items: [
           { skill: 'HTML', percent: 95 },
           { skill: 'CSS', percent: 95 },
           { skill: 'Sass', percent: 90 },
@@ -90,7 +90,7 @@ const data = {
       },
       {
         heading: 'Backend',
-        skills: [
+        items: [
           { skill: 'Node', percent: 90 },
           { skill: 'Express', percent: 90 },
           { skill: 'MongoDB', percent: 85 },
@@ -101,7 +101,7 @@ const data = {
       },
       {
         heading: 'Libraries/Frameworks',
-        skills: [
+        items: [
           { skill: 'React', percent: 95 },
           { skill: 'React Native', percent: 80 },
           { skill: 'Next JS', percent: 90 },
@@ -112,32 +112,32 @@ const data = {
       },
       {
         heading: 'Languages',
-        skills: [
+        items: [
           { skill: 'Python', percent: 70 },
           { skill: 'Javascript', percent: 95 },
           { skill: 'Java', percent: 50 },
         ],
-        animation: 'fade-left',
+        animation: 'fade-right',
       },
       {
         heading: 'Testing',
-        skills: [
+        items: [
           { skill: 'PyUnit', percent: 60 },
           { skill: 'Cypress', percent: 95 },
           { skill: 'RTL (React)', percent: 80 },
           { skill: 'Test Cafe', percent: 50 },
           { skill: 'Selenium', percent: 50 },
         ],
-        animation: 'fade-left',
+        animation: 'fade-up',
       },
       {
         heading: 'Design',
-        skills: [
+        items: [
           { skill: 'Figma', percent: 60 },
           { skill: 'Sketch', percent: 50 },
           { skill: 'Adobe XD', percent: 50 },
         ],
-        animation: 'fade-right',
+        animation: 'fade-left',
       },
     ],
   },
