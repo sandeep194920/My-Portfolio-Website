@@ -22,8 +22,8 @@ function isStringArray(arr: string[] | Item[]): arr is string[] {
 
 function Cards({ data }: Props) {
   return (
-    <section className="max-w-100 mx-auto pt-[1rem] tracking-wide sm:max-w-[83%] sm:pt-[1.5rem] md:max-w-[85%] lg:max-w-70">
-      <div className="flex flex-wrap justify-center gap-6 sm:justify-start sm:gap-6  md:gap-12  lg:gap-16  xl:gap-14 ">
+    <section className="max-w-100 mx-auto overflow-hidden pt-[1rem] tracking-wide sm:max-w-[83%] sm:pt-[1.5rem] md:max-w-[85%] lg:max-w-70">
+      <div className="flex flex-wrap justify-center gap-[4rem] sm:justify-start sm:gap-6  md:gap-12  lg:gap-16  xl:gap-14 ">
         {data.map(({ heading, items, animation }, index) => {
           return (
             <div
@@ -35,7 +35,10 @@ function Cards({ data }: Props) {
               {!isStringArray(items) ? (
                 <ul className="space-y-5">
                   {items.map(({ skill, percent }) => (
-                    <div className="flex items-center" key={skill}>
+                    <div
+                      className="flex items-center text-xs sm:text-sm md:text-base"
+                      key={skill}
+                    >
                       <div className="flex flex-1 items-center space-x-3">
                         <GiBulletBill color="#5CE1E6" />
                         <div className="flex">
@@ -59,7 +62,7 @@ function Cards({ data }: Props) {
                 <ul className="space-y-5">
                   {items.map((link) => (
                     <div
-                      className="flex flex-1 items-center space-x-3"
+                      className="flex flex-1 items-center space-x-3 text-xs sm:text-sm md:text-base"
                       key={link}
                     >
                       <GiBulletBill color="#5CE1E6" />
