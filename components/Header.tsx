@@ -29,7 +29,7 @@ function Header() {
           </div>
         </nav>
         {/* after nav */}
-        <article className="m-auto mt-[7rem] flex max-w-90 items-end sm:mt-[10rem]  sm:max-w-[83%]  md:max-w-[85%] lg:max-w-70">
+        <article className="mx-auto mt-[7rem] flex max-w-90 items-end sm:mt-[10rem]  sm:max-w-[83%]  md:max-w-[85%] lg:max-w-70">
           {/* left section */}
           <div data-aos="fade-right" className="mb-[5rem] flex-1 md:mx-auto">
             <p className="mb-5 max-w-fit rounded-lg bg-grey_gradient px-2 py-1 text-xs sm:mb-8 sm:text-sm">
@@ -101,8 +101,8 @@ function Header() {
         </article>
         {/* after main content in header */}
         <div
-          // data-aos="fade-up"
-          className="md:text-md m-auto mt-[4rem] flex max-w-[95%] flex-wrap items-center justify-center gap-7 pb-4 text-center leading-7 tracking-widest sm:mt-[5rem] sm:max-w-[83%] sm:justify-between sm:pb-10 md:mt-[6rem] md:max-w-[85%] lg:mt-[7rem] lg:max-w-70"
+          data-aos="fade-up"
+          className="md:text-md m-auto mt-[2rem] flex max-w-[95%] flex-wrap items-center justify-center gap-7 pb-10 text-center leading-7 tracking-widest sm:mt-[5rem] sm:max-w-[83%] sm:justify-between sm:pb-10 md:mt-[6rem] md:max-w-[85%] lg:mt-[7rem] lg:max-w-70"
         >
           <div className="flex min-w-[15rem] items-center">
             <h2 className="text-xl sm:text-2xl">4+&nbsp;</h2>

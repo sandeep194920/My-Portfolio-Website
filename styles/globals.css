@@ -7,6 +7,7 @@
 @layer base {
   body {
     font-family: 'Poppins';
+    background: #000;
   }
 
   ::selection {
@@ -149,6 +150,9 @@
 }
 
 @media (max-width: 1280px) {
+  body {
+    background-color: blanchedalmond;
+  }
   .skill {
     top: 15rem;
     left: 25rem;
@@ -166,6 +170,9 @@
 }
 
 @media (max-width: 1185px) {
+  body {
+    background-color: red;
+  }
   .skill {
     top: 15rem;
     left: 22rem;
@@ -179,6 +186,9 @@
 }
 
 @media (max-width: 1116px) {
+  body {
+    background-color: greenyellow;
+  }
   .skill {
     top: 15rem;
     left: 21rem;
@@ -192,6 +202,9 @@
 }
 
 @media (max-width: 1023px) {
+  body {
+    background-color: yellowgreen;
+  }
   .skill {
     top: 16rem;
     left: 21rem;

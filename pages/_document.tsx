@@ -4,6 +4,20 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Viewport meta tag for responsiveness */}
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+
+        {/* Standard meta tags */}
+        <meta name="description" content="Sandeep Amarnath Portfolio" />
+        <meta
+          name="keywords"
+          content="Sandeep Amarnath, Fullstack web developer"
+        />
+
         <link rel="icon" href="/assets/fav_icons/favicon-32x32.png" />
         <link
           rel="apple-touch-icon"
