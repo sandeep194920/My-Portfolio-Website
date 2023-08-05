@@ -29,7 +29,7 @@ function Header() {
           </div>
         </nav>
         {/* after nav */}
-        <article className="mx-auto mt-[7rem] flex max-w-90 items-end sm:mt-[10rem]  sm:max-w-[83%]  md:max-w-[85%] lg:max-w-70">
+        <article className="mx-auto mt-[7rem] flex max-w-90 items-end sm:mt-[10rem] sm:max-w-[83%]  md:max-w-[85%] lg:max-w-70">
           {/* left section */}
           <div data-aos="fade-right" className="mb-[5rem] flex-1 md:mx-auto">
             <p className="mb-5 max-w-fit rounded-lg bg-grey_gradient px-2 py-1 text-xs sm:mb-8 sm:text-sm">
@@ -44,7 +44,7 @@ function Header() {
               </h1>
             </div>
 
-            <p className="mb-10 leading-8 text-gray-300 md:max-w-[100%] lg:max-w-[58%]">
+            <p className="mb-10 text-sm leading-8 text-gray-300 md:max-w-[100%] md:text-base lg:max-w-[58%]">
               {data?.info?.header_sub_text[0]},{' '}
               <span className="bg-gradient bg-clip-text font-extrabold text-transparent">
                 {data?.info?.header_sub_text[1]}{' '}
