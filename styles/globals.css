@@ -150,9 +150,6 @@
 }
 
 @media (max-width: 1280px) {
-  body {
-    background-color: blanchedalmond;
-  }
   .skill {
     top: 15rem;
     left: 25rem;
@@ -170,12 +167,9 @@
 }
 
 @media (max-width: 1185px) {
-  body {
-    background-color: red;
-  }
   .skill {
     top: 15rem;
-    left: 22rem;
+    left: 23.5rem;
   }
   .skill-be {
     font-size: 8rem;
@@ -186,9 +180,6 @@
 }
 
 @media (max-width: 1116px) {
-  body {
-    background-color: greenyellow;
-  }
   .skill {
     top: 15rem;
     left: 21rem;
@@ -202,12 +193,9 @@
 }
 
 @media (max-width: 1023px) {
-  body {
-    background-color: yellowgreen;
-  }
   .skill {
     top: 16rem;
-    left: 21rem;
+    left: 25rem;
   }
   .skill-be {
     font-size: 7rem;
@@ -219,8 +207,8 @@
 
 @media (max-width: 980px) {
   .skill {
-    top: 16.5rem;
-    left: 20rem;
+    top: 16rem;
+    left: 24rem;
   }
   .skill-be {
     font-size: 6.9rem;
@@ -233,7 +221,7 @@
 @media (max-width: 945px) {
   .skill {
     top: 16rem;
-    left: 19rem;
+    left: 23rem;
   }
   .skill-be {
     font-size: 6.9rem;
@@ -246,7 +234,7 @@
 @media (max-width: 892px) {
   .skill {
     top: 16rem;
-    left: 17.5rem;
+    left: 21rem;
   }
   .skill-be {
     font-size: 7rem;
@@ -259,7 +247,7 @@
 @media (max-width: 824px) {
   .skill {
     top: 16rem;
-    left: 16rem;
+    left: 20rem;
   }
   .skill-be {
     font-size: 7rem;
@@ -273,7 +261,7 @@
 @media (max-width: 767px) {
   .skill {
     top: 16rem;
-    left: 14.5rem;
+    left: 18rem;
   }
   .skill-be {
     font-size: 8rem;
@@ -286,7 +274,7 @@
 @media (max-width: 689px) {
   .skill {
     top: 16rem;
-    left: 14rem;
+    left: 17rem;
   }
   .skill-be {
     font-size: 7.5rem;
@@ -299,7 +287,7 @@
 @media (max-width: 663px) {
   .skill {
     top: 16rem;
-    left: 13.2rem;
+    left: 16rem;
   }
   .skill-be {
     font-size: 7rem;
@@ -310,19 +298,12 @@
 }
 
 @media (max-width: 639px) {
-  .skill {
-    top: 16rem;
-    left: 13.2rem;
-  }
-  .skill-be {
-    font-size: 9rem;
-  }
-  .skill-fe {
-    font-size: 14rem;
+  .skill-graphic {
+    display: none;
   }
 }
 
-@media (max-width: 623px) {
+/* @media (max-width: 623px) {
   .skill {
     top: 16rem;
     left: 12rem;
@@ -394,4 +375,4 @@
   .skill-graphic {
     display: none;
   }
-}
+} */

@@ -70,6 +70,8 @@ function Skills() {
                 alt="mongo"
               />
             </div>
+
+            {/* frontend */}
             <div className="skill skill-fe html">
               <Image
                 className="h-[2rem] w-[2rem] sm:h-[2.5rem] sm:w-[2.5rem] md:h-[3rem] md:w-[3rem] lg:h-[4rem] lg:w-[4rem]"
