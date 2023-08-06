@@ -52,7 +52,7 @@ function Cards({ data }: Props) {
                             className="absolute left-0 top-0 h-full bg-cyan-500 opacity-100"
                             style={{ width: `${percent}%` }}
                           ></div>
-                          <div className="absolute left-4 top-1/2 -translate-y-1/2 transform font-bold text-white opacity-100">
+                          <div className="absolute left-4 top-1/2 -translate-y-1/2 transform text-xs font-bold  text-white opacity-100 sm:text-sm">
                             {percent}%
                           </div>
                         </div>
