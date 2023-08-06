@@ -44,7 +44,7 @@ function Header() {
               </h1>
             </div>
 
-            <p className="mb-10 text-sm leading-8 text-gray-300 md:max-w-[100%] md:text-base lg:max-w-[58%]">
+            <p className="mb-10 text-sm leading-8 text-gray-300  sm:leading-9 md:max-w-[100%] md:text-base md:leading-10 lg:max-w-[58%]">
               {data?.info?.header_sub_text[0]},{' '}
               <span className="bg-gradient bg-clip-text font-extrabold text-transparent">
                 {data?.info?.header_sub_text[1]}{' '}

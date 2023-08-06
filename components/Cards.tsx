@@ -31,7 +31,9 @@ function Cards({ data }: Props) {
               key={index}
               className="min-w-[19rem] max-w-[19rem] space-y-6 rounded-lg bg-card_background p-4 sm:min-w-[20rem] sm:max-w-[20rem] sm:p-8 md:min-w-[22rem] md:max-w-[22rem]"
             >
-              <h3 className="text-start text-xl font-bold">{heading}</h3>
+              <h3 className="text-start text-lg font-bold md:text-xl">
+                {heading}
+              </h3>
               {!isStringArray(items) ? (
                 <ul className="space-y-5">
                   {items.map(({ skill, percent }) => (
@@ -50,7 +52,7 @@ function Cards({ data }: Props) {
                             className="absolute left-0 top-0 h-full bg-cyan-500 opacity-100"
                             style={{ width: `${percent}%` }}
                           ></div>
-                          <div className="absolute left-4 top-1/2 -translate-y-1/2 transform text-sm font-bold text-white opacity-100">
+                          <div className="absolute left-4 top-1/2 -translate-y-1/2 transform font-bold text-white opacity-100">
                             {percent}%
                           </div>
                         </div>
