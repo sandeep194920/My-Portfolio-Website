@@ -13,7 +13,7 @@ function ProjectCards() {
       </div>
       <div className="mt-[3rem] flex justify-center">
         <Link target="_blank" href={'https://github.com/sandeep194920/'}>
-          <button className="items-center justify-center rounded-lg border border-primary-clr px-6 py-3 text-xs sm:text-sm md:text-base">
+          <button className="delay-10 items-center justify-center rounded-lg border border-primary-clr px-6 py-1.5 text-xs transition hover:bg-primary-clr sm:text-sm md:text-base">
             <div>View More Projects</div>
           </button>
         </Link>

@@ -6,6 +6,7 @@ import AOS from 'aos'
 
 import 'aos/dist/aos.css'
 import Head from 'next/head'
+import Footer from '@/components/Footer'
 export default function Home() {
   useEffect(() => {
     AOS.init()
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Header />
       <Body />
+      <Footer />
     </Fragment>
   )
 }
