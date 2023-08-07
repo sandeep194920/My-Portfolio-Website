@@ -8,13 +8,7 @@ function Services() {
   return (
     <>
       <Wrapper title="Software Services I offer">
-        <Paragraph>
-          As a passionate software engineer with years of experience, I take
-          pride in offering a range of top-notch software services to meet your
-          business needs. Whether you are a startup looking to build a
-          cutting-edge application or an established company seeking to optimize
-          your processes, I have got you covered.
-        </Paragraph>
+        <Paragraph>{data.services_section.intro}</Paragraph>
       </Wrapper>
 
       {/* Service cards */}
