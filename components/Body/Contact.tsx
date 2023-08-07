@@ -21,7 +21,7 @@ function ContactMe() {
       </Wrapper>
 
       {/* form */}
-      <form className="mx-auto mt-9 max-w-[85%] space-y-7 rounded sm:max-w-[80%] md:max-w-[80%] lg:max-w-[60%] xl:max-w-[50%]">
+      <form className="mx-auto mt-9 max-w-[85%] space-y-7 rounded pb-14 sm:max-w-[80%] md:max-w-[80%] lg:max-w-[60%] xl:max-w-[50%]">
         <div className="flex flex-col justify-between space-y-5 md:flex-row md:space-y-1">
           <div data-aos="fade-right" className="w-[100%] md:w-[45%]">
             <label
@@ -99,7 +99,7 @@ function ContactMe() {
             placeholder="Feel free to share your thoughts with me"
           />
         </div>
-        <div data-aos="fade-up" className="mt-[3rem] flex justify-center">
+        <div className="mt-[3rem] flex justify-center">
           <Link target="_blank" href={'https://github.com/sandeep194920/'}>
             <button className="delay-10 items-center justify-center rounded-lg border border-primary-clr px-6 py-1.5 text-xs transition hover:bg-primary-clr sm:text-sm md:text-base">
               <div>Send</div>
