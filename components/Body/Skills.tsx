@@ -23,7 +23,7 @@ function Skills() {
     <>
       <Wrapper title="My Skills">
         <Paragraph>{data.skills_section.intro}</Paragraph>
-        <div className="mb-[4.5rem] mt-[4.5rem] justify-center sm:flex-wrap xl:flex xl:space-x-6">
+        <div className="mb-0 mt-0 justify-center sm:mb-[4rem] sm:mt-[4rem] sm:flex-wrap xl:flex xl:space-x-6">
           {/* rings image */}
           <div className="skill-graphic relative flex justify-center">
             <Image
