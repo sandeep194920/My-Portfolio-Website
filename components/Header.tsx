@@ -59,7 +59,7 @@ function Header() {
                 </button>
               </Link>
 
-              <button className="items-center justify-center rounded-lg border border-primary-clr px-4 py-2 text-xs sm:text-sm md:text-base">
+              <button className="delay-10 items-center justify-center rounded-lg border border-primary-clr px-4 py-2 text-xs transition hover:bg-gradient hover:text-black sm:text-sm md:text-base">
                 <div>
                   Get in touch{' '}
                   <span className="text-primary-clr"> &#8599; </span>

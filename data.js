@@ -236,6 +236,12 @@ const data = {
       },
     ],
   },
+  contact_section: {
+    intro: [
+      "If you're looking to bring your software vision to life, you've come to the right place. Whether it's a web app, mobile app, or a portfolio page like the one you're currently exploring, I've got you covered. From the initial design phase to the final deployment, I'll be there every step of the way, ensuring your project's success. Additionally, I can provide ongoing maintenance to keep your software running smoothly.",
+      "Let's collaborate and turn your ideas into remarkable realities. Get in touch, and let's make your software dreams a tangible, seamless experience!",
+    ],
+  },
 }
 
 export { data }

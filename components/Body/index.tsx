@@ -2,6 +2,7 @@ import React from 'react'
 import Services from './Services'
 import Skills from './Skills'
 import Projects from './Projects'
+import ContactMe from './Contact'
 
 function Body() {
   return (
@@ -9,6 +10,7 @@ function Body() {
       <Services />
       <Skills />
       <Projects />
+      <ContactMe />
     </section>
   )
 }
