@@ -54,7 +54,7 @@ function Header() {
 
             <div className="flex flex-row space-x-10">
               <Link target="_blank" href={data?.links?.resume}>
-                <button className="items-center justify-center rounded-lg bg-primary-clr bg-gradient px-4 py-2 text-xs text-black sm:text-sm md:text-base">
+                <button className="items-center justify-center rounded-lg bg-gradient px-4 py-2 text-xs text-black sm:text-sm md:text-base">
                   View Resume
                 </button>
               </Link>

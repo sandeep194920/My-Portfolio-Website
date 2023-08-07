@@ -29,7 +29,7 @@ function Cards({ data }: Props) {
             <div
               data-aos={animation}
               key={index}
-              className="min-w-[19rem] max-w-[19rem] space-y-6 rounded-lg bg-card_background p-4 sm:min-w-[20rem] sm:max-w-[20rem] sm:p-8 md:min-w-[22rem] md:max-w-[22rem]"
+              className="min-w-[19rem] max-w-[19rem] space-y-6 rounded-lg bg-card_background p-4 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] sm:min-w-[20rem] sm:max-w-[20rem] sm:p-8 md:min-w-[22rem] md:max-w-[22rem]"
             >
               <h3 className="text-start text-lg font-bold md:text-xl">
                 {heading}

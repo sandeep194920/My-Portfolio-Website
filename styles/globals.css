@@ -15,6 +15,12 @@
   }
 }
 
+@layer utilities {
+  .clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+}
+
 .bg-gradient-metal {
   background: radial-gradient(
     circle,
