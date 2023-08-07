@@ -23,7 +23,7 @@ function isStringArray(arr: string[] | Item[]): arr is string[] {
 function Cards({ data }: Props) {
   return (
     <section className="max-w-100 mx-auto overflow-hidden pt-[1rem] tracking-wide sm:max-w-[83%] sm:pt-[1.5rem] md:max-w-[85%] lg:max-w-70">
-      <div className="flex flex-wrap justify-center gap-[4rem] sm:justify-start sm:gap-6  md:gap-12  lg:gap-16  xl:gap-14 ">
+      <div className="flex flex-wrap justify-center gap-[2rem] sm:justify-start sm:gap-6  md:gap-12  lg:gap-16  xl:gap-14 ">
         {data.map(({ heading, items, animation }, index) => {
           return (
             <div

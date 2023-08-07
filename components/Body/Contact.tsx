@@ -21,7 +21,7 @@ function ContactMe() {
       </Wrapper>
 
       {/* form */}
-      <form className="mx-auto mt-9 max-w-[85%] space-y-7 rounded pb-14 sm:max-w-[80%] md:max-w-[80%] lg:max-w-[60%] xl:max-w-[50%]">
+      <form className="mx-auto mt-9 max-w-[85%] space-y-7 overflow-hidden rounded pb-14 sm:max-w-[80%] md:max-w-[80%] lg:max-w-[60%] xl:max-w-[50%]">
         <div className="flex flex-col justify-between space-y-5 md:flex-row md:space-y-1">
           <div data-aos="fade-right" className="w-[100%] md:w-[45%]">
             <label
@@ -33,7 +33,7 @@ function ContactMe() {
             <input
               type="text"
               id="full-name"
-              className="w-full rounded border-none bg-card_background px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
+              className="w-full rounded border-none bg-gray-900 px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
               placeholder="John Doe"
             />
           </div>
@@ -47,7 +47,7 @@ function ContactMe() {
             <input
               type="email"
               id="email"
-              className="w-full rounded border-none bg-card_background px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
+              className="w-full rounded border-none bg-gray-900 px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
               placeholder="john@example.com"
             />
           </div>
@@ -66,7 +66,7 @@ function ContactMe() {
             <input
               type="tel"
               id="phone"
-              className="w-full rounded border-none bg-card_background px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
+              className="w-full rounded border-none bg-gray-900 px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
               placeholder="(999)-999-9999"
             />
           </div>
@@ -80,7 +80,7 @@ function ContactMe() {
             <input
               type="text"
               id="subject"
-              className="w-full rounded border-none bg-card_background px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
+              className="w-full rounded border-none bg-gray-900 px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
               placeholder="A brief about your message"
             />
           </div>
@@ -95,7 +95,7 @@ function ContactMe() {
           <textarea
             id="message"
             rows={4}
-            className="w-full rounded border-none bg-card_background px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
+            className="w-full rounded border-none bg-gray-900 px-3 py-2 placeholder:text-xs focus:outline-1 focus:outline-primary-clr"
             placeholder="Feel free to share your thoughts with me"
           />
         </div>
