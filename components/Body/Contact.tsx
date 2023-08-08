@@ -6,7 +6,7 @@ import { data } from '@/data'
 
 function ContactMe() {
   return (
-    <>
+    <div id="contact-me">
       <Wrapper title="Let's Get In Touch">
         <Paragraph>
           {data.contact_section.intro.map((text, index) => {
@@ -21,7 +21,10 @@ function ContactMe() {
       </Wrapper>
 
       {/* form */}
-      <form className="mx-auto mt-9 max-w-[85%] space-y-7 overflow-hidden rounded pb-14 sm:max-w-[80%] md:max-w-[80%] lg:max-w-[60%] xl:max-w-[50%]">
+      <form
+        id="contact-section"
+        className="mx-auto mt-9 max-w-[85%] space-y-7 overflow-hidden rounded pb-14 sm:max-w-[80%] md:max-w-[80%] lg:max-w-[60%] xl:max-w-[50%]"
+      >
         <div className="flex flex-col justify-between space-y-5 md:flex-row md:space-y-1">
           <div data-aos="fade-right" className="w-[100%] md:w-[45%]">
             <label
@@ -107,7 +110,7 @@ function ContactMe() {
           </Link>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 

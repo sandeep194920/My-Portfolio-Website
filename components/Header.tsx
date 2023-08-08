@@ -5,6 +5,7 @@ import Circle from './UI_Enhancers/Circle'
 import { data } from '../data'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import robotHand from '../public/assets/images/robot_hand.png'
+import { Link as ScrollLink } from 'react-scroll'
 
 function Header() {
   return (
@@ -18,11 +19,22 @@ function Header() {
               Sandeep<span className="text-primary-clr">Amarnath</span>
             </p>
           </div>
-          <div className="hidden space-x-[2rem] text-sm sm:flex md:space-x-10">
-            <Link href="www.google.com">Resume</Link>
-            <Link href="www.google.com">Skills</Link>
-            <Link href="www.google.com">Projects</Link>
-            <Link href="www.google.com">Contact me</Link>
+          <div className="hidden items-center space-x-[2rem] text-sm sm:flex md:space-x-10">
+            <Link href={data?.links?.resume} target="_blank">
+              <p>Resume</p>
+            </Link>
+            <ScrollLink to="services" smooth={true} duration={500}>
+              <p className="cursor-pointer">Services</p>
+            </ScrollLink>
+            <ScrollLink to="my-skills" smooth={true} duration={500}>
+              <p className="cursor-pointer">Skills</p>
+            </ScrollLink>
+            <ScrollLink to="projects" smooth={true} duration={500}>
+              <p className="cursor-pointer">Projects</p>
+            </ScrollLink>
+            <ScrollLink to="contact-me" smooth={true} duration={500}>
+              <p className="cursor-pointer">Contact me</p>
+            </ScrollLink>
           </div>
           <div className="cursor-pointer sm:hidden">
             <GiHamburgerMenu size={22} />
@@ -59,12 +71,14 @@ function Header() {
                 </button>
               </Link>
 
-              <button className="delay-10 items-center justify-center rounded-lg border border-primary-clr px-4 py-2 text-xs transition hover:bg-gradient hover:text-black sm:text-sm md:text-base">
-                <div>
-                  Get in touch{' '}
-                  <span className="text-primary-clr"> &#8599; </span>
-                </div>
-              </button>
+              <ScrollLink to="contact-section" smooth={true} duration={500}>
+                <button className="delay-10 items-center justify-center rounded-lg border border-primary-clr px-4 py-2 text-xs transition hover:bg-gradient hover:text-black sm:text-sm md:text-base">
+                  <div>
+                    Get in touch{' '}
+                    <span className="text-primary-clr"> &#8599; </span>
+                  </div>
+                </button>
+              </ScrollLink>
             </div>
           </div>
 
@@ -77,8 +91,8 @@ function Header() {
               <Circle size="md" />
             </div>
             {/* resume - absolute */}
-            <div className="absolute lg:start-[10rem] lg:top-[-5rem] ">
-              <Link href={data?.links?.resume}>
+            <div className="absolute lg:start-[10rem] lg:top-[-5rem]">
+              <Link href={data?.links?.resume} target="_blank">
                 <Image
                   src="./assets/images/view_resume.svg"
                   width={180}

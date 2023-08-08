@@ -20,7 +20,7 @@ import Cards from '../Cards'
 
 function Skills() {
   return (
-    <>
+    <div id="my-skills">
       <Wrapper title="My Skills">
         <Paragraph>{data.skills_section.intro}</Paragraph>
         <div className="mb-0 mt-0 justify-center sm:mb-[4rem] sm:mt-[4rem] sm:flex-wrap xl:flex xl:space-x-6">
@@ -154,7 +154,7 @@ function Skills() {
         </div>
       </Wrapper>
       <Cards data={data.skills_section.skills} />
-    </>
+    </div>
   )
 }
 
