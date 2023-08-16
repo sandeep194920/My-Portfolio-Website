@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import Header from '@/components/Header'
 import Body from '@/components/Body'
 import { useEffect } from 'react'
@@ -8,17 +8,24 @@ import 'aos/dist/aos.css'
 import Head from 'next/head'
 import Footer from '@/components/Footer'
 export default function Home() {
+  const [isNavigationChecked, setIsNavigationChecked] = useState(false)
+
   useEffect(() => {
     AOS.init()
   }, [])
+
   return (
     <Fragment>
       <Head>
         <title>Sandeep Amarnath</title>
       </Head>
-      <Header />
-      <Body />
-      <Footer />
+      <Header setIsNavigationChecked={setIsNavigationChecked} />
+      {isNavigationChecked && (
+        <>
+          <Body isNavigationChecked={isNavigationChecked} />
+          <Footer />
+        </>
+      )}
     </Fragment>
   )
 }

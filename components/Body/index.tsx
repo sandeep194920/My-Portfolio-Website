@@ -4,7 +4,7 @@ import Skills from './Skills'
 import Projects from './Projects'
 import ContactMe from './Contact'
 
-function Body() {
+function Body({ isNavigationChecked }: { isNavigationChecked: boolean }) {
   return (
     <section className="bg-body_background text-white">
       <Services />

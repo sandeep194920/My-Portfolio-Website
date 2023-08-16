@@ -35,7 +35,6 @@ function ContactMe() {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     e.preventDefault()
-    console.log(`name - ${e.target.name}, and value - ${e.target.value}`)
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -75,7 +74,6 @@ function ContactMe() {
     }
     setIsFormSubmitted(true)
     setFormData(form)
-    console.log('Form Submitted')
   }
 
   useEffect(() => {
