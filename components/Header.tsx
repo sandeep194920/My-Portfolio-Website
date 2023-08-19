@@ -10,16 +10,14 @@ import Navbutton from './Navbutton'
 interface HeaderProps {
   setIsNavigationChecked: React.Dispatch<React.SetStateAction<boolean>>
 }
-
 function Header({ setIsNavigationChecked }: HeaderProps) {
   return (
     <>
-      {/* Mobile navigation ends */}
       <section className="relative bg-black">
         <div className="header-bg mx-auto text-white">
           <nav className="mx-auto flex max-w-90 items-center justify-between   pt-9 sm:max-w-[83%]  md:max-w-[85%] lg:max-w-70">
             <div className="flex items-center">
-              {/* LOGO */}
+              {/* Logo */}
               <Image
                 alt="logo"
                 src="./assets/logo.svg"
@@ -30,24 +28,24 @@ function Header({ setIsNavigationChecked }: HeaderProps) {
                 Sandeep<span className="text-primary-clr">Amarnath</span>
               </p>
             </div>
+
+            {/* nav links medium screen size and up*/}
             <div className="hidden items-center space-x-[2rem] text-sm md:flex md:space-x-10">
-              <Link href={data?.links?.resume} target="_blank">
+              <Link href={data.navlinks[0].link} target="_blank">
                 <p>Resume</p>
               </Link>
-              <ScrollLink to="services" smooth={true} duration={500}>
-                <p className="cursor-pointer">Services</p>
-              </ScrollLink>
-              <ScrollLink to="my-skills" smooth={true} duration={500}>
-                <p className="cursor-pointer">Skills</p>
-              </ScrollLink>
-              <ScrollLink to="projects" smooth={true} duration={500}>
-                <p className="cursor-pointer">Projects</p>
-              </ScrollLink>
-              <ScrollLink to="contact-me" smooth={true} duration={500}>
-                <p className="cursor-pointer">Contact me</p>
-              </ScrollLink>
+
+              {data.navlinks.slice(1).map((navLink) => {
+                const { name, link } = navLink
+                return (
+                  <ScrollLink key={name} to={link} smooth={true} duration={500}>
+                    <p className="cursor-pointer">{name}</p>
+                  </ScrollLink>
+                )
+              })}
             </div>
 
+            {/* navigation for small screen*/}
             <div className="flex items-center space-x-10 text-sm md:hidden">
               <Navbutton setIsNavigationChecked={setIsNavigationChecked} />
             </div>
@@ -77,7 +75,7 @@ function Header({ setIsNavigationChecked }: HeaderProps) {
               </p>
 
               <div className="flex flex-row space-x-10">
-                <Link target="_blank" href={data?.links?.resume}>
+                <Link target="_blank" href={data.navlinks[0].link}>
                   <button className="items-center justify-center rounded-lg bg-gradient px-4 py-2 text-xs text-black sm:text-sm md:text-base">
                     View Resume
                   </button>
@@ -107,7 +105,7 @@ function Header({ setIsNavigationChecked }: HeaderProps) {
               </div>
               {/* resume - absolute */}
               <div className="absolute lg:start-[10rem] lg:top-[-5rem]">
-                <Link href={data?.links?.resume} target="_blank">
+                <Link href={data.navlinks[0].link} target="_blank">
                   <Image
                     src="./assets/images/view_resume.svg"
                     width={180}

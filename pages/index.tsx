@@ -14,9 +14,6 @@ export default function Home() {
     AOS.init()
   }, [])
 
-  useEffect(() => {
-    console.log('The isNAv is', isNavigationChecked)
-  }, [isNavigationChecked])
   return (
     <Fragment>
       <Head>

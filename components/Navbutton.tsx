@@ -13,16 +13,15 @@ function Navbutton({ setIsNavigationChecked }: NavbuttonProps) {
     setIsNavigationChecked((prev: boolean) => !prev)
   }
 
-  function handleScroll() {
+  function handleScroll(to: string) {
     // Call the scrollTo function to scroll to a specific section
-
+    // timeout added here so that the element is visible once the link is clicked. This is required because the link-click enables hidden checkbox check, which then should enable this scroll (otherwise the "element not found" happens and won't scroll to the location)
     setTimeout(() => {
-      console.log('HAHAHA')
-      scroller.scrollTo('contact-me', {
+      scroller.scrollTo(to, {
         smooth: true,
         duration: 500,
       })
-    }, 100)
+    }, 400)
   }
 
   /* Mobile navigation */
@@ -56,55 +55,44 @@ function Navbutton({ setIsNavigationChecked }: NavbuttonProps) {
           onClick={handleButtonClick}
         >
           <div className="relative w-6 cursor-pointer flex-col items-center justify-center">
-            <div className="top-0 h-0.5 rotate-45  bg-red-400"></div>
+            <div className="top-0 h-0.5 rotate-45 bg-red-400"></div>
             <div className="-mt-0.5 h-0.5 -rotate-45 bg-red-400"></div>
           </div>
         </label>
 
+        {/* navlinks for small screen */}
         <ul className="navigation__list flex h-[100%] flex-col items-center justify-center">
           <li className="navigation__item">
-            <Link href={data?.links?.resume} className="navigation__link">
+            <Link
+              href={data.navlinks[0].link}
+              target="_blank"
+              className="navigation__link"
+            >
               Resume
             </Link>
           </li>
 
-          <li
-            onClick={() => setIsNavigationChecked((prev) => !prev)}
-            className="navigation__item"
-          >
-            <ScrollLink to="services" className="navigation__link">
-              Services
-            </ScrollLink>
-          </li>
-          <li className="navigation__item">
-            <Link href="#" className="navigation__link">
-              Skills
-            </Link>
-          </li>
-          <li className="navigation__item">
-            <Link href="#" className="navigation__link">
-              Projects
-            </Link>
-          </li>
-          <li className="navigation__item">
-            <label htmlFor="navi-toggle" className="navigation__button">
-              <Link href="#" className="navigation__link">
-                Contact me
-              </Link>
-            </label>
-          </li>
-          <li className="navigation__item" onClick={handleScroll}>
-            <label
-              htmlFor="navi-toggle"
-              className="navigation__button navigation__link"
-              onClick={(e) => {
-                handleButtonClick(e)
-                handleScroll()
-              }}
-            >
-              Link
-            </label>
-          </li>
+          {data.navlinks.slice(1).map((navLink) => {
+            const { name, link } = navLink
+            return (
+              <li
+                key={name}
+                className="navigation__item"
+                onClick={() => handleScroll(link)}
+              >
+                <label
+                  htmlFor="navi-toggle"
+                  className="navigation__button navigation__link"
+                  onClick={(e) => {
+                    handleButtonClick(e)
+                    handleScroll(link)
+                  }}
+                >
+                  {name}
+                </label>
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </div>

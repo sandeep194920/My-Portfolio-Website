@@ -1,8 +1,26 @@
 const data = {
-  links: {
-    resume:
-      'https://drive.google.com/file/d/1pcL1czFgXxifgwwQL-W-Eo6O-ojyE24S/view?usp=drive_link',
-  },
+  navlinks: [
+    {
+      name: 'Resume',
+      link: 'https://drive.google.com/file/d/1pcL1czFgXxifgwwQL-W-Eo6O-ojyE24S/view?usp=drive_link',
+    },
+    {
+      name: 'Services',
+      link: 'services',
+    },
+    {
+      name: 'Skills',
+      link: 'my-skills',
+    },
+    {
+      name: 'Projects',
+      link: 'projects',
+    },
+    {
+      name: 'Contact me',
+      link: 'contact-me',
+    },
+  ],
   info: {
     header_pre_text: 'A versatile full stack web and mobile developer',
     header_sub_text: [
