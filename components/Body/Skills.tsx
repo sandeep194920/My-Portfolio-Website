@@ -17,12 +17,26 @@ import tailwind from '../../public/assets/images/skills/frontend/tailwind.png'
 import typescript from '../../public/assets/images/skills/frontend/typescript.png'
 import Image from 'next/image'
 import Cards from '../Cards'
+import Link from 'next/link'
 
 function Skills() {
   return (
     <div id="my-skills">
       <Wrapper title="My Skills">
-        <Paragraph>{data.skills_section.intro}</Paragraph>
+        <Paragraph>
+          {data.skills_section.intro}
+          <br></br> With this, I also take notes in my own words while I learn
+          something new, ensuring that I retain knowledge for a lifetime and
+          have quick access to it when needed. You can{' '}
+          <Link
+            href={'https://sandeepamaranath.gitbook.io/notes/'}
+            target="_blank"
+          >
+            <span className="border border-transparent border-b-primary-clr bg-gradient bg-clip-text font-extrabold text-transparent">
+              find more about my journey and insights in my personal notes.
+            </span>
+          </Link>
+        </Paragraph>
         <div className="mb-0 mt-0 justify-center sm:mb-[4rem] sm:mt-[4rem] sm:flex-wrap xl:flex xl:space-x-6">
           {/* rings image */}
           <div className="skill-graphic relative flex justify-center">

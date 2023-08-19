@@ -21,6 +21,40 @@ const data = {
       link: 'contact-me',
     },
   ],
+
+  footerLinks: [
+    {
+      name: 'Resume',
+      link: 'https://drive.google.com/file/d/1pcL1czFgXxifgwwQL-W-Eo6O-ojyE24S/view?usp=drive_link',
+      icon: 'BsNewspaper',
+    },
+    {
+      name: 'Github',
+      link: 'https://github.com/sandeep194920/',
+      icon: 'BsGithub',
+    },
+    {
+      name: 'Stackoverflow',
+      link: 'https://stackoverflow.com/users/10824697/sandeep-amarnath?tab=summary',
+      icon: 'BsStackOverflow',
+    },
+    {
+      name: 'Medium blogs',
+      link: 'https://medium.com/@sandeepamarnath',
+      icon: 'BsMedium',
+    },
+    {
+      name: 'Linkedin',
+      link: 'https://www.linkedin.com/in/sandeepamarnath/',
+      icon: 'BsLinkedin',
+    },
+    {
+      name: 'My notes',
+      link: 'https://sandeepamaranath.gitbook.io/notes/',
+      icon: 'BiBookAlt',
+    },
+  ],
+
   info: {
     header_pre_text: 'A versatile full stack web and mobile developer',
     header_sub_text: [
