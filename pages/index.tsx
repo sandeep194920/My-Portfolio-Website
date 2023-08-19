@@ -14,13 +14,16 @@ export default function Home() {
     AOS.init()
   }, [])
 
+  useEffect(() => {
+    console.log('The isNAv is', isNavigationChecked)
+  }, [isNavigationChecked])
   return (
     <Fragment>
       <Head>
         <title>Sandeep Amarnath</title>
       </Head>
       <Header setIsNavigationChecked={setIsNavigationChecked} />
-      {isNavigationChecked && (
+      {!isNavigationChecked && (
         <>
           <Body isNavigationChecked={isNavigationChecked} />
           <Footer />

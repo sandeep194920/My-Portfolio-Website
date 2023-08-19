@@ -1,12 +1,28 @@
+import { data } from '@/data'
+import Link from 'next/link'
 import React from 'react'
+import { Link as ScrollLink } from 'react-scroll'
+import { scroller } from 'react-scroll'
 
 interface NavbuttonProps {
   setIsNavigationChecked: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 function Navbutton({ setIsNavigationChecked }: NavbuttonProps) {
-  const handleButtonClick: React.MouseEventHandler<HTMLLabelElement> = () => {
+  const handleButtonClick: React.MouseEventHandler<HTMLElement> = () => {
     setIsNavigationChecked((prev: boolean) => !prev)
+  }
+
+  function handleScroll() {
+    // Call the scrollTo function to scroll to a specific section
+
+    setTimeout(() => {
+      console.log('HAHAHA')
+      scroller.scrollTo('contact-me', {
+        smooth: true,
+        duration: 500,
+      })
+    }, 100)
   }
 
   /* Mobile navigation */
@@ -24,16 +40,14 @@ function Navbutton({ setIsNavigationChecked }: NavbuttonProps) {
         className="navigation__button"
         onClick={handleButtonClick}
       >
-        {/* <span className="navigation__icon">&nbsp;</span> */}
         <div className="w-6 cursor-pointer flex-col space-y-1 ease-in-out hover:space-y-2">
           <div className="h-0.5 origin-center bg-white"></div>
           <div className="h-0.5 bg-white"></div>
           <div className="h-0.5 origin-center bg-white"></div>
         </div>
       </label>
-      {/* white circular bg for navigation icon to sit on  */}
       <div className="navigation__background">&nbsp;</div>
-      {/* navigation__nav is the huge element that occupies the screen when the navigation__button is clicked  */}
+
       <nav className="navigation__nav">
         {/* navitoggle button */}
         <label
@@ -41,41 +55,55 @@ function Navbutton({ setIsNavigationChecked }: NavbuttonProps) {
           className="navigation__button absolute right-10 top-10"
           onClick={handleButtonClick}
         >
-          {/* <span className="navigation__icon">&nbsp;</span> */}
           <div className="relative w-6 cursor-pointer flex-col items-center justify-center">
             <div className="top-0 h-0.5 rotate-45  bg-red-400"></div>
             <div className="-mt-0.5 h-0.5 -rotate-45 bg-red-400"></div>
           </div>
         </label>
 
-        {/*  */}
-        {/* <ul className="navigation__list m-auto justify-center bg-red-400"> */}
         <ul className="navigation__list flex h-[100%] flex-col items-center justify-center">
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <Link href={data?.links?.resume} className="navigation__link">
               Resume
-            </a>
+            </Link>
           </li>
 
-          <li className="navigation__item">
-            <a href="#" className="navigation__link">
+          <li
+            onClick={() => setIsNavigationChecked((prev) => !prev)}
+            className="navigation__item"
+          >
+            <ScrollLink to="services" className="navigation__link">
               Services
-            </a>
+            </ScrollLink>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <Link href="#" className="navigation__link">
               Skills
-            </a>
+            </Link>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <Link href="#" className="navigation__link">
               Projects
-            </a>
+            </Link>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
-              Contact me
-            </a>
+            <label htmlFor="navi-toggle" className="navigation__button">
+              <Link href="#" className="navigation__link">
+                Contact me
+              </Link>
+            </label>
+          </li>
+          <li className="navigation__item" onClick={handleScroll}>
+            <label
+              htmlFor="navi-toggle"
+              className="navigation__button navigation__link"
+              onClick={(e) => {
+                handleButtonClick(e)
+                handleScroll()
+              }}
+            >
+              Link
+            </label>
           </li>
         </ul>
       </nav>
