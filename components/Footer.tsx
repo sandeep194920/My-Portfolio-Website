@@ -32,7 +32,7 @@ function Footer() {
   return (
     <footer className="relative flex items-center justify-center bg-primary-clr bg-opacity-50 text-xs text-white sm:text-sm">
       {/* row */}
-      <div className="m-auto mb-[3rem] mt-10 flex  w-[90%] flex-col items-center justify-center gap-11 sm:mb-[6rem] sm:mt-14 sm:w-[70%] sm:flex-row sm:flex-wrap sm:justify-start 2xl:justify-center">
+      <div className="m-auto mb-[3rem] mt-10 flex w-[90%] flex-col items-center justify-center gap-11 sm:mb-[3rem] sm:mt-14 sm:flex-row sm:flex-wrap sm:justify-start lg:justify-center">
         {data.footerLinks.map((footerLink) => {
           const { name, icon, link } = footerLink
           return (
