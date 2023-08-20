@@ -275,7 +275,7 @@ function ContactMe() {
             </div>
           </>
         ) : (
-          <p className="mb-14 text-center leading-10 text-green-200">
+          <p className="mb-14 text-center leading-10">
             Thank you for your message! I&apos;ll be in touch within the next 24
             hours.
           </p>
