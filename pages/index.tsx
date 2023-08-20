@@ -22,7 +22,7 @@ export default function Home() {
       <Header setIsNavigationChecked={setIsNavigationChecked} />
       {!isNavigationChecked && (
         <>
-          <Body isNavigationChecked={isNavigationChecked} />
+          <Body />
           <Footer />
         </>
       )}

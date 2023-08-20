@@ -4,6 +4,9 @@ import Paragraph from './Helpers/Paragraph'
 import Link from 'next/link'
 import { data } from '@/data'
 import axios from 'axios'
+import Modal from '../Modal'
+import LoadingSpinner from '../LoadingSpinner'
+
 interface FormData {
   fullName: string
   email: string
@@ -21,6 +24,18 @@ const form = {
 }
 
 function ContactMe() {
+  // modal
+  // for now we will leave this modal logic here. If we find using in other places, then we can create a context and put it in that for reusability
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
   const [isFormOk, setIsFormOk] = useState({
     status: true,
     error: '',
@@ -28,6 +43,7 @@ function ContactMe() {
   const [isFormTouched, setIsFormTouched] = useState(false)
   const [formData, setFormData] = useState<FormData>(form)
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const formHandler = (
     e:
@@ -44,6 +60,8 @@ function ContactMe() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsLoading(true)
+    setIsModalOpen(true)
     setIsFormSubmitted(false)
     if (!isFormTouched) {
       // Only validate if the form has been touched
@@ -70,17 +88,24 @@ function ContactMe() {
     })
 
     if (formError) {
+      setIsLoading(false)
+      setIsModalOpen(false)
       return
     }
     // submit the form (call api)
     try {
       const response = await axios.post('/api/send-email', {
-        to: 'sandeepamaranath@gmail.com',
-        subject: 'Testing',
-        text: 'test message',
+        name: formData.fullName,
+        email: formData.email,
+        subject: formData.subject,
+        phone: formData.phone,
+        message: formData.message,
       })
 
       console.log(`The response is ${response.data.message}`)
+      if (response.status === 200) {
+        setIsLoading(false)
+      }
       // Handle success
     } catch (error) {
       console.error('Error sending email:', error)
@@ -99,7 +124,7 @@ function ContactMe() {
   }, [isFormSubmitted])
 
   return (
-    <div id="contact-me">
+    <div id="contact-me relative">
       <Wrapper title="Let's Get In Touch">
         <Paragraph>
           {data.contact_section.intro.map((text, index) => {
@@ -238,6 +263,26 @@ function ContactMe() {
           </Link>
         </div>
       </form>
+
+      <button onClick={openModal}>Open Modal</button>
+
+      <Modal isOpen={isModalOpen} onClose={closeModal} isLoading={isLoading}>
+        {isLoading ? (
+          <>
+            <h2 className="my-10 border-b-primary-clr bg-gradient bg-clip-text text-lg font-extrabold text-transparent">
+              Sending Email....
+            </h2>
+            <div className="mb-14 flex justify-center">
+              <LoadingSpinner />
+            </div>
+          </>
+        ) : (
+          <p className="mb-14 text-center leading-10 text-green-200">
+            Thank you for your message! I&apos;ll be in touch within the next 24
+            hours.
+          </p>
+        )}
+      </Modal>
     </div>
   )
 }

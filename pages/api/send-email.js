@@ -1,5 +1,7 @@
 const nodemailer = require('nodemailer')
 const { google } = require('googleapis')
+import EmailTemplate from '../../components/EmailTemplate'
+import { renderToStaticMarkup } from 'react-dom/server'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -8,15 +10,11 @@ export default async function handler(req, res) {
 
   console.log('REACHED HERE')
 
-  const { to, subject, text } = req.body
+  const { name, email, subject, phone, message } = req.body
 
-  // const transporter = nodemailer.createTransport({
-  //   service: 'Gmail', // Your email service provider
-  //   auth: {
-  //     user: 'your-email@gmail.com', // Your email address
-  //     pass: 'your-email-password', // Your email password
-  //   },
-  // })
+  // console.log('The to is', to)
+  // console.log('The sub is', subject)
+  // console.log('The text is', text)
 
   const oauth2Client = new google.auth.OAuth2(
     process.env.CLIENT_ID,
@@ -34,7 +32,7 @@ export default async function handler(req, res) {
     service: 'Gmail',
     auth: {
       type: 'OAuth2',
-      user: process.env.SENDER_EMAIL,
+      user: process.env.MY_EMAIL,
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       refreshToken: process.env.REFRESH_TOKEN,
@@ -42,16 +40,28 @@ export default async function handler(req, res) {
     },
   })
 
-  const mailOptions = {
-    from: `Sandeep Amarnath <${process.env.SENDER_EMAIL}>`,
-    to,
-    subject,
-    text,
+  const receiverEmailOptions = {
+    to: `Sandeep Amarnath <${process.env.MY_EMAIL}>`,
+    subject: `[My Portfolio] - ${email} - ${name} - ${subject} ${
+      phone && `- ${phone}`
+    }`,
+    text: message,
+  }
+
+  const emailTemplate = <EmailTemplate name={name} />
+  const htmlTemplate = renderToStaticMarkup(emailTemplate)
+
+  const senderEmailOptions = {
+    to: email,
+    subject: `Sandeep Amarnath - Thank You for Contacting Me`,
+    html: htmlTemplate,
   }
 
   try {
-    const info = await transporter.sendMail(mailOptions)
-    console.log('Email sent:', info.response)
+    const recieverEmail = await transporter.sendMail(receiverEmailOptions)
+    console.log('Email recieved:', recieverEmail.response)
+    const senderEmail = await transporter.sendMail(senderEmailOptions)
+    console.log('Email sent:', senderEmail.response)
     return res.status(200).json({ message: 'Email sent successfully' })
   } catch (error) {
     console.error('Error sending email:', error)
