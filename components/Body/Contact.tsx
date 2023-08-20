@@ -264,15 +264,13 @@ function ContactMe() {
         </div>
       </form>
 
-      <button onClick={openModal}>Open Modal</button>
-
       <Modal isOpen={isModalOpen} onClose={closeModal} isLoading={isLoading}>
         {isLoading ? (
           <>
             <h2 className="my-10 border-b-primary-clr bg-gradient bg-clip-text text-lg font-extrabold text-transparent">
               Sending Email....
             </h2>
-            <div className="mb-14 flex justify-center">
+            <div className="mb-10 flex justify-center">
               <LoadingSpinner />
             </div>
           </>
