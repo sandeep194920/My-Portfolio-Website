@@ -124,7 +124,7 @@ function ContactMe() {
   }, [isFormSubmitted])
 
   return (
-    <div id="contact-me relative">
+    <div id="contact-me">
       <Wrapper title="Let's Get In Touch">
         <Paragraph>
           {data.contact_section.intro.map((text, index) => {

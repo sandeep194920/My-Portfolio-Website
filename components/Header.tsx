@@ -26,7 +26,7 @@ function Header({ setIsNavigationChecked }: HeaderProps) {
           {/* nav links medium screen size and up*/}
           <div className="hidden items-center space-x-[2rem] text-sm md:flex md:space-x-10">
             <Link href={data.navlinks[0].link} target="_blank">
-              <p>Resume</p>
+              <p>Github</p>
             </Link>
 
             {data.navlinks.slice(1).map((navLink) => {
