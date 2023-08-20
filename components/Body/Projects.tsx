@@ -6,7 +6,7 @@ import ProjectCards from '../ProjectCards'
 
 function Projects() {
   return (
-    <>
+    <div id="projects">
       <Wrapper title="My Projects">
         <Paragraph>
           {data.projects_section.intro.map((text, index) => {
@@ -20,7 +20,7 @@ function Projects() {
         </Paragraph>
       </Wrapper>
       <ProjectCards />
-    </>
+    </div>
   )
 }
 

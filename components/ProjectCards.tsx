@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 function ProjectCards() {
   return (
-    <section className="max-w-100 mx-auto overflow-hidden pt-[1rem] tracking-wide sm:max-w-[83%] sm:pt-[1.5rem] md:max-w-[85%] lg:max-w-70">
+    <section className="max-w-100 mx-auto overflow-hidden pt-[1rem] tracking-wide sm:max-w-[83%] sm:pt-[2.5rem] md:max-w-[85%] lg:max-w-70">
       <div className="flex flex-wrap justify-center gap-[2rem] sm:justify-start sm:gap-6  md:gap-12  lg:gap-16  xl:gap-14 ">
         {data.projects_section.projects.map((project) => {
           return <ProjectCard key={project.name} {...project} />

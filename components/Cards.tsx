@@ -27,7 +27,7 @@ function Cards({ data }: Props) {
         {data.map(({ heading, items, animation }, index) => {
           return (
             <div
-              data-aos={animation}
+              // data-aos={animation}
               key={index}
               className="min-w-[19rem] max-w-[19rem] space-y-6 rounded-lg bg-card_background p-4 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] sm:min-w-[20rem] sm:max-w-[20rem] sm:p-8 md:min-w-[22rem] md:max-w-[22rem]"
             >
@@ -52,7 +52,7 @@ function Cards({ data }: Props) {
                             className="absolute left-0 top-0 h-full bg-cyan-500 opacity-100"
                             style={{ width: `${percent}%` }}
                           ></div>
-                          <div className="absolute left-4 top-1/2 -translate-y-1/2 transform text-xs font-bold  text-white opacity-100 sm:text-sm">
+                          <div className="absolute left-4 top-1/2 -translate-y-1/2 transform text-xs font-bold text-white opacity-100 sm:text-sm">
                             {percent}%
                           </div>
                         </div>

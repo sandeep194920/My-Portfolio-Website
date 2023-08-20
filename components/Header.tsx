@@ -3,29 +3,45 @@ import Link from 'next/link'
 import React from 'react'
 import Circle from './UI_Enhancers/Circle'
 import { data } from '../data'
-import { GiHamburgerMenu } from 'react-icons/gi'
 import robotHand from '../public/assets/images/robot_hand.png'
+import { Link as ScrollLink } from 'react-scroll'
+import Navbutton from './Navbutton'
 
-function Header() {
+interface HeaderProps {
+  setIsNavigationChecked: React.Dispatch<React.SetStateAction<boolean>>
+}
+function Header({ setIsNavigationChecked }: HeaderProps) {
   return (
     <section className="relative bg-black">
       <div className="header-bg mx-auto text-white">
-        <nav className="mx-auto flex max-w-90 items-center justify-between pt-9 sm:max-w-[83%]  md:max-w-[85%] lg:max-w-70">
+        <nav className="mx-auto flex max-w-90 items-center justify-between   pt-9 sm:max-w-[83%]  md:max-w-[85%] lg:max-w-70">
           <div className="flex items-center">
-            {/* LOGO */}
+            {/* Logo */}
             <Image alt="logo" src="./assets/logo.svg" width={30} height={30} />
             <p className="ml-1 text-sm font-extrabold tracking-wider">
               Sandeep<span className="text-primary-clr">Amarnath</span>
             </p>
           </div>
-          <div className="hidden space-x-[2rem] text-sm sm:flex md:space-x-10">
-            <Link href="www.google.com">Resume</Link>
-            <Link href="www.google.com">Skills</Link>
-            <Link href="www.google.com">Projects</Link>
-            <Link href="www.google.com">Contact me</Link>
+
+          {/* nav links medium screen size and up*/}
+          <div className="hidden items-center space-x-[2rem] text-sm md:flex md:space-x-10">
+            <Link href={data.navlinks[0].link} target="_blank">
+              <p>Resume</p>
+            </Link>
+
+            {data.navlinks.slice(1).map((navLink) => {
+              const { name, link } = navLink
+              return (
+                <ScrollLink key={name} to={link} smooth={true} duration={500}>
+                  <p className="cursor-pointer">{name}</p>
+                </ScrollLink>
+              )
+            })}
           </div>
-          <div className="cursor-pointer sm:hidden">
-            <GiHamburgerMenu size={22} />
+
+          {/* navigation for small screen*/}
+          <div className="flex items-center space-x-10 text-sm md:hidden">
+            <Navbutton setIsNavigationChecked={setIsNavigationChecked} />
           </div>
         </nav>
         {/* after nav */}
@@ -53,18 +69,20 @@ function Header() {
             </p>
 
             <div className="flex flex-row space-x-10">
-              <Link target="_blank" href={data?.links?.resume}>
+              <Link target="_blank" href={data.navlinks[0].link}>
                 <button className="items-center justify-center rounded-lg bg-gradient px-4 py-2 text-xs text-black sm:text-sm md:text-base">
                   View Resume
                 </button>
               </Link>
 
-              <button className="delay-10 items-center justify-center rounded-lg border border-primary-clr px-4 py-2 text-xs transition hover:bg-gradient hover:text-black sm:text-sm md:text-base">
-                <div>
-                  Get in touch{' '}
-                  <span className="text-primary-clr"> &#8599; </span>
-                </div>
-              </button>
+              <ScrollLink to="contact-section" smooth={true} duration={500}>
+                <button className="delay-10 items-center justify-center rounded-lg border border-primary-clr px-4 py-2 text-xs transition hover:bg-gradient hover:text-black sm:text-sm md:text-base">
+                  <div>
+                    Get in touch{' '}
+                    <span className="text-primary-clr"> &#8599; </span>
+                  </div>
+                </button>
+              </ScrollLink>
             </div>
           </div>
 
@@ -77,8 +95,8 @@ function Header() {
               <Circle size="md" />
             </div>
             {/* resume - absolute */}
-            <div className="absolute lg:start-[10rem] lg:top-[-5rem] ">
-              <Link href={data?.links?.resume}>
+            <div className="absolute lg:start-[10rem] lg:top-[-5rem]">
+              <Link href={data.navlinks[0].link} target="_blank">
                 <Image
                   src="./assets/images/view_resume.svg"
                   width={180}
