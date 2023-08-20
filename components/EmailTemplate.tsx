@@ -1,3 +1,4 @@
+import { data } from '@/data'
 import Image from 'next/image'
 
 function EmailTemplate({ name }: { name: string }) {
@@ -53,20 +54,12 @@ function EmailTemplate({ name }: { name: string }) {
             Hi {name},
             <br />
             <br />
-            <p>
-              Thank you for reaching out to me through my portfolio website. I
-              appreciate your interest and will review your email as soon as
-              possible. I aim to respond within 24 hours.
-            </p>
-            <p>
-              If you have any urgent matters or questions, please feel free to
-              contact me directly at mr.sandeepamarnath@gmail.com or +1(902)
-              802-8894.
-            </p>
+            <p>{data.email_template[0]}</p>
+            <p>{data.email_template[1]}</p>
             <br />
             <br />
-            <p>Regards,</p>
-            <p>Sandeep</p>
+            <p>{data.email_template[2]}</p>
+            <p>{data.email_template[3]}</p>
           </p>
         </td>
       </tr>
