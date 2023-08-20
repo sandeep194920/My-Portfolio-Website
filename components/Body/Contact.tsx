@@ -3,7 +3,7 @@ import Wrapper from './Helpers/Wrapper'
 import Paragraph from './Helpers/Paragraph'
 import Link from 'next/link'
 import { data } from '@/data'
-
+import axios from 'axios'
 interface FormData {
   fullName: string
   email: string
@@ -42,7 +42,7 @@ function ContactMe() {
     setIsFormTouched(true)
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsFormSubmitted(false)
     if (!isFormTouched) {
@@ -71,6 +71,20 @@ function ContactMe() {
 
     if (formError) {
       return
+    }
+    // submit the form (call api)
+    try {
+      const response = await axios.post('/api/send-email', {
+        to: 'sandeepamaranath@gmail.com',
+        subject: 'Testing',
+        text: 'test message',
+      })
+
+      console.log(`The response is ${response.data.message}`)
+      // Handle success
+    } catch (error) {
+      console.error('Error sending email:', error)
+      // Handle error
     }
     setIsFormSubmitted(true)
     setFormData(form)
