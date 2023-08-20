@@ -68,7 +68,7 @@ function Navbutton({ setIsNavigationChecked }: NavbuttonProps) {
               target="_blank"
               className="navigation__link"
             >
-              Resume
+              Github
             </Link>
           </li>
 

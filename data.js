@@ -1,8 +1,8 @@
 const data = {
   navlinks: [
     {
-      name: 'Resume',
-      link: 'https://drive.google.com/file/d/1pcL1czFgXxifgwwQL-W-Eo6O-ojyE24S/view?usp=drive_link',
+      name: 'Github',
+      link: 'https://github.com/sandeep194920/',
     },
     {
       name: 'Services',
@@ -294,6 +294,12 @@ const data = {
       "Let's collaborate and turn your ideas into remarkable realities. Get in touch, and let's make your software dreams a tangible, seamless experience!",
     ],
   },
+  email_template: [
+    'Thank you for reaching out to me through my portfolio website. I appreciate your interest and will review your email as soon as possible. I aim to respond within 24 hours.',
+    'If you have any urgent matters or questions, please feel free to contact me directly at mr.sandeepamarnath@gmail.com or +1(902) 802-8894.',
+    'Regards,',
+    'Sandeep',
+  ],
 }
 
 export { data }
