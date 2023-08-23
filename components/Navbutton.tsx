@@ -68,11 +68,19 @@ function Navbutton({ setIsNavigationChecked }: NavbuttonProps) {
               target="_blank"
               className="navigation__link"
             >
+              Resume
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link
+              href={data.navlinks[1].link}
+              target="_blank"
+              className="navigation__link"
+            >
               Github
             </Link>
           </li>
-
-          {data.navlinks.slice(1).map((navLink) => {
+          {data.navlinks.slice(2).map((navLink) => {
             const { name, link } = navLink
             return (
               <li

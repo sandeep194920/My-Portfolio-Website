@@ -25,11 +25,11 @@ function Header({ setIsNavigationChecked }: HeaderProps) {
 
           {/* nav links medium screen size and up*/}
           <div className="hidden items-center space-x-[2rem] text-sm md:flex md:space-x-10">
-            <Link href={data.navlinks[0].link} target="_blank">
+            <Link href={data.navlinks[1].link} target="_blank">
               <p>Github</p>
             </Link>
 
-            {data.navlinks.slice(1).map((navLink) => {
+            {data.navlinks.slice(2).map((navLink) => {
               const { name, link } = navLink
               return (
                 <ScrollLink key={name} to={link} smooth={true} duration={500}>
