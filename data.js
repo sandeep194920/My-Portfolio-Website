@@ -1,6 +1,10 @@
 const data = {
   navlinks: [
     {
+      name: 'Resume',
+      link: 'https://drive.google.com/file/d/1pcL1czFgXxifgwwQL-W-Eo6O-ojyE24S/view?usp=drive_link',
+    },
+    {
       name: 'Github',
       link: 'https://github.com/sandeep194920/',
     },
