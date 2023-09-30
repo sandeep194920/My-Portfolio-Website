@@ -164,7 +164,7 @@ const data = {
           { skill: 'Bootstrap', percent: 70 },
           { skill: 'Material UI', percent: 90 },
         ],
-        animation: 'fade-up',
+        animation: 'fade-left',
       },
       {
         heading: 'Languages',
